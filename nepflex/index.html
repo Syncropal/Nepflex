@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nepflex - Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/index.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-header">
+            <h1>LOGIN HERE</h1>
+            <caption>Welcome back to Nepflex</caption>
+            <p>“Workout free jasto, result gym jasto.”</p>
+        </div>
+        
+        <form id="loginForm">
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <i class="fas fa-lock input-icon"></i>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Enter your password" required>
+                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+                <div class="error-message" id="password-error">Password must be at least 6 characters</div>
+            </div>
+            
+            <div class="forgot-password">
+                <a href="forgot-password.html">Forgot Password?</a>
+            </div>
+            
+            <button type="submit" class="login-btn">
+                <i class="fas fa-sign-in-alt"></i> Login
+            </button>
+            
+            <div class="divider">OR</div>
+            
+            <div class="social-login">
+                <div class="social-btn facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </div>
+                <div class="social-btn google">
+                    <i class="fab fa-google"></i>
+                </div>
+                <div class="social-btn twitter">
+                    <i class="fab fa-twitter"></i>
+                </div>
+            </div>
+        </form>
+        
+        <div class="register-link">
+            <p>Don't have an account? <a href="register.html">Register Now</a></p>
+        </div>
+    </div>
+
+    <script src="jsnepflex/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - Nepflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/register.css">
+</head>
+<body>
+    <div class="register-container">
+        <div class="register-header">
+            <h1>CREATE ACCOUNT</h1>
+            <caption>Join our Nepflex</caption>
+            <p>“Workout free jasto, result gym jasto.”</p>
+        </div>
+        
+        <form id="registerForm">
+            <div class="name-fields">
+                <div class="input-group">
+                    <label for="firstName">First Name</label>
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="firstName" placeholder="Enter your first name" required>
+                    <div class="error-message" id="firstName-error">Please enter your first name</div>
+                </div>
+                
+                <div class="input-group">
+                    <label for="lastName">Last Name</label>
+                    <i class="fas fa-user input-icon"></i>
+                    <input type="text" id="lastName" placeholder="Enter your last name" required>
+                    <div class="error-message" id="lastName-error">Please enter your last name</div>
+                </div>
+            </div>
+            
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <i class="fas fa-envelope input-icon"></i>
+                <input type="email" id="email" placeholder="Enter your email" required>
+                <div class="error-message" id="email-error">Please enter a valid email address</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="userType">I am a</label>
+                <i class="fas fa-users input-icon"></i>
+                <select id="userType" required>
+                    <option value="" disabled selected>Select user type</option>
+                    <option value="student">Student</option>
+                    <option value="faculty">Faculty</option>
+                    <option value="staff">Staff</option>
+                    <option value="community">Community Member</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="password">Password</label>
+                <i class="fas fa-lock input-icon"></i>
+                <div class="password-container">
+                    <input type="password" id="password" placeholder="Create a password" required>
+                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                </div>
+                <div class="error-message" id="password-error">Password must be at least 8 characters</div>
+            </div>
+            
+            <div class="input-group">
+                <label for="confirmPassword">Confirm Password</label>
+                <i class="fas fa-lock input-icon"></i>
+                <div class="password-container">
+                    <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
+                    <i class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                </div>
+                <div class="error-message" id="confirmPassword-error">Passwords do not match</div>
+            </div>
+            
+            <div class="terms">
+                <input type="checkbox" id="agreeTerms" required>
+                <label for="agreeTerms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+            </div>
+            
+            <button type="submit" class="register-btn">
+                <i class="fas fa-user-plus"></i> Create Account
+            </button>
+        </form>
+        
+        <div class="login-link">
+            <p>Already have an account? <a href="index.html">Login Here</a></p>
+        </div>
+    </div>
+
+    <script src="jsnepflex/register.js"></script>
+</body>
+</html>

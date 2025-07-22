@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - Nepflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/setting.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-heartbeat" aria-hidden="true"></i> Nepflex</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Activities</span>
+            </a>
+            <a href="progress.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="nutrition.html" class="menu-item">
+                <i class="fas fa-utensils"></i>
+                <span>Nutrition</span>
+            </a>
+            <a href="workouts.html" class="menu-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workouts</span>
+            </a>
+            <a href="sleep.html" class="menu-item">
+                <i class="fas fa-moon"></i>
+                <span>Sleep</span>
+            </a>
+            <a href="community.html" class="menu-item">
+                <i class="fas fa-comment-medical"></i>
+                <span>Community</span>
+            </a>
+            <a href="setting.html" class="menu-item active">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+            <a href="index.html" class="menu-item" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="settings-header">
+            <h1 class="settings-title">Settings</h1>
+        </div>
+        
+        <div class="settings-container">
+            <!-- Profile Section -->
+            <section class="settings-section">
+                <div class="section-header">
+                    <h2 class="section-title">Profile Settings</h2>
+                </div>
+                
+                <div class="profile-picture">
+                    <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile picture">
+                    <div>
+                        <div class="picture-actions">
+                            <button class="btn btn-outline">Change Photo</button>
+                            <button class="btn btn-outline">Remove</button>
+                        </div>
+                        <p class="small-text">Recommended size: 200x200 pixels</p>
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" value="Tripal">
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" value="Bayalkoti">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="bio">Bio</label>
+                    <textarea id="bio">Fitness enthusiast and nutrition expert. Love running marathons and helping others achieve their health goals.</textarea>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select id="gender">
+                              <option value="male">Male</option>
+                              <option value="female">Female</option>
+                              <option value="other">Other</option>
+                              <option value="prefer-not">Prefer not to say</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-col">
+                        <div class="form-group">
+                            <label for="birthdate">Birthdate</label>
+                            <input type="date" id="birthdate" value="2004-02-24">
+                        </div>
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary">Save Changes</button>
+            </section>
+            
+            <!-- Account Settings -->
+            <section class="settings-section">
+                <div class="section-header">
+                    <h2 class="section-title">Account Settings</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" value="Tripal@example.com">
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" value="********">
+                    <p class="small-text" style="margin-top: 0.5rem;"><a href="#" style="color: var(--primary-color);">Change Password</a></p>
+                </div>
+                
+                <div class="form-group">
+                    <label for="language">Language</label>
+                    <select id="language">
+                        <option value="en">English</option>
+                        <option value="es">Spanish</option>
+                        <option value="fr">French</option>
+                        <option value="de">German</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="timezone">Timezone</label>
+                    <select id="timezone">
+                        <option value="est">Eastern Time (ET)</option>
+                        <option value="cst">Central Time (CT)</option>
+                        <option value="mst">Mountain Time (MT)</option>
+                        <option value="pst" selected>Nepal Time (PT)</option>
+                    </select>
+                </div>
+                
+                <button class="btn btn-primary">Update Account</button>
+            </section>
+            
+            <!-- Notification Preferences -->
+            <section class="settings-section">
+                <div class="section-header">
+                    <h2 class="section-title">Notification Preferences</h2>
+                </div>
+                
+                <div class="notification-item">
+                    <div>
+                        <h4>Email Notifications</h4>
+                        <p class="small-text">Receive updates via email</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-item">
+                    <div>
+                        <h4>Push Notifications</h4>
+                        <p class="small-text">Receive alerts on your device</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-item">
+                    <div>
+                        <h4>Workout Reminders</h4>
+                        <p class="small-text">Get reminders for scheduled workouts</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox" checked>
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-item">
+                    <div>
+                        <h4>Community Updates</h4>
+                        <p class="small-text">Notifications about community activity</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+                
+                <div class="notification-item">
+                    <div>
+                        <h4>Promotional Offers</h4>
+                        <p class="small-text">Special offers and discounts</p>
+                    </div>
+                    <label class="toggle-switch">
+                        <input type="checkbox">
+                        <span class="slider"></span>
+                    </label>
+                </div>
+            </section>
+            
+            <!-- Privacy Settings -->
+            <section class="settings-section">
+                <div class="section-header">
+                    <h2 class="section-title">Privacy Settings</h2>
+                </div>
+                
+                <div class="form-group">
+                    <label for="profileVisibility">Profile Visibility</label>
+                    <select id="profileVisibility">
+                        <option value="public">Public</option>
+                        <option value="friends">Friends Only</option>
+                        <option value="private">Private</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="activitySharing">Activity Sharing</label>
+                    <select id="activitySharing">
+                        <option value="all">Share All Activities</option>
+                        <option value="selected">Share Selected Activities</option>
+                        <option value="none">Don't Share Activities</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label for="dataCollection">Data Collection</label>
+                    <select id="dataCollection">
+                        <option value="full">Full (Improves app experience)</option>
+                        <option value="limited">Limited</option>
+                        <option value="minimal">Minimal</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label class="toggle-switch">
+                        <input type="checkbox" id="personalizedAds" checked>
+                        <span class="slider"></span>
+                        <span style="margin-left: 10px;">Personalized Advertisements</span>
+                    </label>
+                </div>
+                
+                <button class="btn btn-primary">Save Privacy Settings</button>
+            </section>
+            
+            <!-- Danger Zone -->
+            <section class="settings-section">
+                <div class="danger-zone">
+                    <div class="danger-zone-header">
+                        <i class="fas fa-exclamation-triangle"></i>
+                        <h3>Danger Zone</h3>
+                    </div>
+                    
+                    <div class="form-group">
+                        <p>Deleting your account will remove all your data from our servers. This action cannot be undone.</p>
+                        <button class="btn btn-outline" style="border-color: var(--error-color); color: var(--error-color); margin-top: 1rem;">
+                            Delete Account
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const logoutBtn = document.getElementById('logoutBtn');
+            
+            // Initialize dark mode from parent or localStorage
+            function initializeDarkMode() {
+                // Check if we're embedded in the dashboard iframe
+                if (window.parent !== window) {
+                    // Request dark mode state from parent
+                    window.parent.postMessage({ type: 'getDarkModeState' }, '*');
+                    
+                    // Listen for response
+                    window.addEventListener('message', function(event) {
+                        if (event.data.type === 'darkModeState') {
+                            toggleDarkMode(event.data.enabled);
+                        }
+                    });
+                } else {
+                    // Check localStorage if standalone
+                    const darkModeEnabled = localStorage.getItem('darkMode') === 'true';
+                    toggleDarkMode(darkModeEnabled);
+                }
+            }
+            
+            // Toggle dark mode
+            function toggleDarkMode(enabled) {
+                if (enabled) {
+                    document.body.classList.add('dark-mode');
+                } else {
+                    document.body.classList.remove('dark-mode');
+                }
+            }
+            
+            // Initialize dark mode
+            initializeDarkMode();
+            
+            // Fallback dark mode check
+            setTimeout(() => {
+                if (!document.body.classList.contains('dark-mode') && 
+                    !document.body.classList.contains('light-mode')) {
+                    if (localStorage.getItem('darkMode') === 'true') {
+                        document.body.classList.add('dark-mode');
+                    }
+                }
+            }, 500);
+            
+            // Logout button
+            logoutBtn.addEventListener('click', function(e) {
+                e.preventDefault();
+                // In a real app, you would handle logout here
+                alert('You have been logged out');
+                window.location.href = 'login.html';
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - Nepflex</title>
+    <meta name="description" content="Nepflex health and wellness dashboard">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/dashboard.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-heartbeat" aria-hidden="true"></i> Nepflex</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Activities</span>
+            </a>
+            <a href="progress.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="nutrition.html" class="menu-item">
+                <i class="fas fa-utensils"></i>
+                <span>Nutrition</span>
+            </a>
+            <a href="workouts.html" class="menu-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workouts</span>
+            </a>
+            <a href="sleep.html" class="menu-item">
+                <i class="fas fa-moon"></i>
+                <span>Sleep</span>
+            </a>
+            <a href="community.html" class="menu-item">
+                <i class="fas fa-comment-medical"></i>
+                <span>Community</span>
+            </a>
+            <a href="setting.html" class="menu-item">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="themeToggle">
+                <span class="slider"></span>
+            </label>
+            <span>Dark Mode</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Top Navigation -->
+        <div class="top-nav">
+            <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div class="search-bar">
+                <i class="fas fa-search" aria-hidden="true"></i>
+                <input type="text" placeholder="Search..." aria-label="Search dashboard">
+            </div>
+            <div class="user-profile">
+                <div class="notification-container">
+                    <button class="notification-icon" aria-label="Notifications">
+                        <i class="fas fa-bell" aria-hidden="true"></i>
+                        <span class="notification-badge" aria-live="polite">3</span>
+                    </button>
+                    <div class="notification-dropdown">
+                        <div class="notification-item unread">
+                            <strong>New workout available</strong>
+                            <p>Try our new yoga routine for beginners</p>
+                            <small>10 minutes ago</small>
+                        </div>
+                        <div class="notification-item unread">
+                            <strong>Water reminder</strong>
+                            <p>Time to hydrate! You haven't logged water in 2 hours</p>
+                            <small>1 hour ago</small>
+                        </div>
+                        <div class="notification-item">
+                            <strong>Weekly report</strong>
+                            <p>Your weekly activity summary is ready</p>
+                            <small>Yesterday</small>
+                        </div>
+                    </div>
+                </div>
+                <img src="https://randomuser.me/api/portraits/women/44.jpg" alt="Profile picture of Tripal Bayalkoti">
+                <span>Tripal Bayalkoti</span>
+            </div>
+        </div>
+
+        <!-- Dashboard Cards -->
+        <div class="dashboard-cards">
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3>12,345</h3>
+                        <p>Steps Today</p>
+                    </div>
+                    <div class="card-icon green">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3>7h 42m</h3>
+                        <p>Sleep Last Night</p>
+                    </div>
+                    <div class="card-icon blue">
+                        <i class="fas fa-bed"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3>2,450</h3>
+                        <p>Calories Burned</p>
+                    </div>
+                    <div class="card-icon orange">
+                        <i class="fas fa-fire"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="card-header">
+                    <div>
+                        <h3>85%</h3>
+                        <p>Hydration</p>
+                    </div>
+                    <div class="card-icon purple">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Activity and Quick Actions -->
+        <div class="activity-section">
+            <div class="activity-card">
+                <div class="section-header">
+                    <h3>Recent Activity</h3>
+                    <a href="#">View All</a>
+                </div>
+                <ul class="activity-list">
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-running"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Morning Run</h4>
+                            <p>Completed 5km in 28 minutes</p>
+                        </div>
+                        <div class="activity-time">2h ago</div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Meal Logged</h4>
+                            <p>Vegetable salad with quinoa</p>
+                        </div>
+                        <div class="activity-time">4h ago</div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-glass-cheers"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Water Intake</h4>
+                            <p>Drank 500ml of water</p>
+                        </div>
+                        <div class="activity-time">5h ago</div>
+                    </li>
+                    <li class="activity-item">
+                        <div class="activity-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <div class="activity-info">
+                            <h4>Achievement Unlocked</h4>
+                            <p>5 days workout streak!</p>
+                        </div>
+                        <div class="activity-time">1d ago</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="quick-actions">
+                <div class="section-header">
+                    <h3>Quick Actions</h3>
+                </div>
+                <div class="quick-actions-grid">
+                    <a href="activities.html" class="action-btn">
+                        <i class="fas fa-plus"></i>
+                        <span>Log Activity</span>
+                    </a>
+                    <a href="meal.html" class="action-btn">
+                        <i class="fas fa-utensils"></i>
+                        <span>Add Meal</span>
+                    </a>
+                    <a href="./nutrition.html" class="action-btn">
+                        <i class="fas fa-tint"></i>
+                        <span>Log Water</span>
+                    </a>
+                    <a href="sleep.html" class="action-btn">
+                        <i class="fas fa-moon"></i>
+                        <span>Sleep Log</span>
+                    </a>
+                    <a href="#" class="action-btn">
+                        <i class="fas fa-weight"></i>
+                        <span>Weight In</span>
+                    </a>
+                    <a href="Community.html" class="action-btn">
+                        <i class="fas fa-comment-medical"></i>
+                        <span>Community</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Articles -->
+        <div class="articles-section">
+            <div class="section-header">
+                <h3>Nepflex Articles</h3>
+                <a href="#">View All</a>
+            </div>
+            <div class="articles-grid">
+                <div class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1535914254981-b5012eebbd15?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="article-content">
+                        <h4>5 Morning Habits for a Healthier Day</h4>
+                        <p>Start your day right with these simple wellness habits that can boost your energy and productivity.</p>
+                        <div class="article-meta">
+                            <span>5 min read</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="article-content">
+                        <h4>Plant-Based Nutrition Guide</h4>
+                        <p>Discover the benefits of plant-based eating and how to get all your essential nutrients.</p>
+                        <div class="article-meta">
+                            <span>8 min read</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="article-card">
+                    <div class="article-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"></div>
+                    <div class="article-content">
+                        <h4>Yoga for Stress Relief</h4>
+                        <p>Learn these 5 yoga poses that can help reduce stress and improve mental clarity.</p>
+                        <div class="article-meta">
+                            <span>6 min read</span>
+                            <a href="#" class="read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jsnepflex/dashboard.js"></script>
+</body>
+</html>

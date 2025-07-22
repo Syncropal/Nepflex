@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Workouts - Nepflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/workouts.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-heartbeat" aria-hidden="true"></i> Nepflex</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Activities</span>
+            </a>
+            <a href="progress.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="nutrition.html" class="menu-item">
+                <i class="fas fa-utensils"></i>
+                <span>Nutrition</span>
+            </a>
+            <a href="workouts.html" class="menu-item active">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workouts</span>
+            </a>
+            <a href="sleep.html" class="menu-item">
+                <i class="fas fa-moon"></i>
+                <span>Sleep</span>
+            </a>
+            <a href="login.html" class="menu-item" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="workout-header">
+            <h1 class="workout-title">Workout Programs</h1>
+            <button class="new-workout-btn" id="newWorkoutBtn">
+                <i class="fas fa-plus"></i> New Workout
+            </button>
+        </div>
+        
+        <!-- Workout Categories -->
+        <div class="workout-categories">
+            <div class="category-card active" data-category="all">
+                <div class="category-icon">
+                    <i class="fas fa-dumbbell"></i>
+                </div>
+                <div class="category-name">All Workouts</div>
+                <div class="category-count">12 programs</div>
+            </div>
+            <div class="category-card" data-category="strength">
+                <div class="category-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="category-name">Strength</div>
+                <div class="category-count">5 programs</div>
+            </div>
+            <div class="category-card" data-category="cardio">
+                <div class="category-icon">
+                    <i class="fas fa-heartbeat"></i>
+                </div>
+                <div class="category-name">Cardio</div>
+                <div class="category-count">3 programs</div>
+            </div>
+            <div class="category-card" data-category="hiit">
+                <div class="category-icon">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div class="category-name">HIIT</div>
+                <div class="category-count">2 programs</div>
+            </div>
+            <div class="category-card" data-category="yoga">
+                <div class="category-icon">
+                    <i class="fas fa-spa"></i>
+                </div>
+                <div class="category-name">Yoga</div>
+                <div class="category-count">2 programs</div>
+            </div>
+        </div>
+        
+        <!-- Workout Filters -->
+        <div class="workout-filters">
+            <div class="filter-group">
+                <label for="workoutType" id="workoutTypeLabel">Workout Type</label>
+                <select id="workoutType" aria-labelledby="workoutTypeLabel">
+                    <option value="all">All Types</option>
+                    <option value="strength">Strength Training</option>
+                    <option value="cardio">Cardio</option>
+                    <option value="hiit">HIIT</option>
+                    <option value="yoga">Yoga & Stretching</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="difficulty" id="difficultyLabel">Difficulty</label>
+                <select id="difficulty" aria-labelledby="difficultyLabel">
+                    <option value="all">All Levels</option>
+                    <option value="beginner">Beginner</option>
+                    <option value="intermediate">Intermediate</option>
+                    <option value="advanced">Advanced</option>
+                </select>
+            </div>
+            <div class="filter-group">
+                <label for="duration" id="durationLabel">Duration</label>
+                <select id="duration" aria-labelledby="durationLabel">
+                    <option value="all">Any Duration</option>
+                    <option value="short">Under 30 min</option>
+                    <option value="medium">30-60 min</option>
+                    <option value="long">Over 60 min</option>
+                </select>
+            </div>
+        </div>
+        
+        <!-- Workout Programs Grid -->
+        <div class="workout-programs" id="workoutPrograms">
+            <!-- Program Card 1 -->
+            <div class="program-card" data-id="1" data-category="strength" data-difficulty="intermediate" data-duration="medium">
+                <div class="program-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
+                     aria-label="Person lifting weights">
+                </div>
+                <div class="program-details">
+                    <span class="program-level">Intermediate</span>
+                    <h3 class="program-name">Full Body Strength</h3>
+                    <p class="program-description">Build muscle and strength with this comprehensive full body workout.</p>
+                    <div class="program-stats">
+                        <div class="stat">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">45 min</div>
+                                <div class="stat-label">Duration</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">6</div>
+                                <div class="stat-label">Exercises</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-fire" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">450 cal</div>
+                                <div class="stat-label">Burned</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-actions">
+                        <button class="action-btn start-btn">
+                            <i class="fas fa-play" aria-hidden="true"></i> Start
+                        </button>
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye" aria-hidden="true"></i> View
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Card 2 -->
+            <div class="program-card" data-id="2" data-category="cardio" data-difficulty="beginner" data-duration="short">
+                <div class="program-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
+                     aria-label="Person running on treadmill">
+                </div>
+                <div class="program-details">
+                    <span class="program-level">Beginner</span>
+                    <h3 class="program-name">Cardio Blast</h3>
+                    <p class="program-description">Boost your endurance with this high-energy cardio session.</p>
+                    <div class="program-stats">
+                        <div class="stat">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">25 min</div>
+                                <div class="stat-label">Duration</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">4</div>
+                                <div class="stat-label">Exercises</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-fire" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">350 cal</div>
+                                <div class="stat-label">Burned</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-actions">
+                        <button class="action-btn start-btn">
+                            <i class="fas fa-play" aria-hidden="true"></i> Start
+                        </button>
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye" aria-hidden="true"></i> View
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Card 3 -->
+            <div class="program-card" data-id="3" data-category="hiit" data-difficulty="advanced" data-duration="short">
+                <div class="program-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
+                     aria-label="Person doing burpees">
+                </div>
+                <div class="program-details">
+                    <span class="program-level">Advanced</span>
+                    <h3 class="program-name">HIIT Challenge</h3>
+                    <p class="program-description">Maximize fat burning with this intense HIIT workout.</p>
+                    <div class="program-stats">
+                        <div class="stat">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">20 min</div>
+                                <div class="stat-label">Duration</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">8</div>
+                                <div class="stat-label">Exercises</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-fire" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">500 cal</div>
+                                <div class="stat-label">Burned</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-actions">
+                        <button class="action-btn start-btn">
+                            <i class="fas fa-play" aria-hidden="true"></i> Start
+                        </button>
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye" aria-hidden="true"></i> View
+                        </button>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Program Card 4 -->
+            <div class="program-card" data-id="4" data-category="yoga" data-difficulty="beginner" data-duration="medium">
+                <div class="program-image" 
+                     style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
+                     aria-label="Person doing yoga">
+                </div>
+                <div class="program-details">
+                    <span class="program-level">Beginner</span>
+                    <h3 class="program-name">Morning Yoga Flow</h3>
+                    <p class="program-description">Start your day with this energizing yoga sequence.</p>
+                    <div class="program-stats">
+                        <div class="stat">
+                            <i class="fas fa-clock" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">30 min</div>
+                                <div class="stat-label">Duration</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-dumbbell" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">12</div>
+                                <div class="stat-label">Poses</div>
+                            </div>
+                        </div>
+                        <div class="stat">
+                            <i class="fas fa-fire" aria-hidden="true"></i>
+                            <div>
+                                <div class="stat-value">200 cal</div>
+                                <div class="stat-label">Burned</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="program-actions">
+                        <button class="action-btn start-btn">
+                            <i class="fas fa-play" aria-hidden="true"></i> Start
+                        </button>
+                        <button class="action-btn view-btn">
+                            <i class="fas fa-eye" aria-hidden="true"></i> View
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Workout Exercises Section -->
+        <div class="workout-exercises">
+            <div class="exercises-header">
+                <h3 class="exercises-title">Popular Exercises</h3>
+                <button class="action-btn">
+                    <i class="fas fa-plus" aria-hidden="true"></i> Add Custom
+                </button>
+            </div>
+            <ul class="exercise-list">
+                <li class="exercise-item">
+                    <div class="exercise-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');" aria-label="Squat exercise"></div>
+                    <div class="exercise-info">
+                        <div class="exercise-name">Bodyweight Squats</div>
+                        <div class="exercise-muscles">Quads, Glutes, Hamstrings</div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');" aria-label="Pushup exercise"></div>
+                    <div class="exercise-info">
+                        <div class="exercise-name">Push-ups</div>
+                        <div class="exercise-muscles">Chest, Shoulders, Triceps</div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');" aria-label="Lunge exercise"></div>
+                    <div class="exercise-info">
+                        <div class="exercise-name">Walking Lunges</div>
+                        <div class="exercise-muscles">Legs, Core</div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </li>
+                <li class="exercise-item">
+                    <div class="exercise-image" style="background-image: url('https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');" aria-label="Plank exercise"></div>
+                    <div class="exercise-info">
+                        <div class="exercise-name">Plank</div>
+                        <div class="exercise-muscles">Core, Shoulders</div>
+                    </div>
+                    <div class="exercise-actions">
+                        <button class="action-btn">
+                            <i class="fas fa-plus" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Modal Template -->
+    <div class="modal" id="workoutModal">
+        <div class="modal-content">
+            <h3 id="modalTitle">Modal Title</h3>
+            <p id="modalMessage">This is a modal message.</p>
+            <button class="modal-close" id="modalClose">OK</button>
+        </div>
+    </div>
+
+    <script src="jsnepflex/workouts.js"></script>
+</body>
+</html>

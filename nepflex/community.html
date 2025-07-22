@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Community - Nepflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/communitiy.css">
+    <style>
+       
+    </style>
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-heartbeat" aria-hidden="true"></i> Nepflex</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Activities</span>
+            </a>
+            <a href="progress.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="nutrition.html" class="menu-item">
+                <i class="fas fa-utensils"></i>
+                <span>Nutrition</span>
+            </a>
+            <a href="workouts.html" class="menu-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workouts</span>
+            </a>
+            <a href="sleep.html" class="menu-item">
+                <i class="fas fa-moon"></i>
+                <span>Sleep</span>
+            </a>
+            <a href="community.html" class="menu-item active">
+                <i class="fas fa-comment-medical"></i>
+                <span>Community</span>
+            </a>
+            <a href="login.html" class="menu-item" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="community-header">
+            <h1 class="community-title">Community</h1>
+            <button class="new-post-btn" id="newPostBtn">
+                <i class="fas fa-plus"></i> New Post
+            </button>
+        </div>
+        
+        <!-- Community Tabs -->
+        <div class="community-tabs">
+            <div class="tab active">Feed</div>
+            <div class="tab">Groups</div>
+            <div class="tab">Discussions</div>
+            <div class="tab">Challenges</div>
+            <div class="tab">Events</div>
+        </div>
+        
+        <!-- Community Content -->
+        <div class="community-feed">
+            <!-- Posts Section -->
+            <div class="posts-section">
+                <!-- Post 1 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="User profile">
+                            <div class="post-user-info">
+                                <h4>Sarah Johnson</h4>
+                                <p>Fitness Enthusiast</p>
+                            </div>
+                        </div>
+                        <div class="post-time">2 hours ago</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-text">
+                            Just completed my first marathon! 🎉 It was tough but so rewarding. 
+                            For anyone thinking about running their first marathon, my advice 
+                            is to trust your training and enjoy the experience!
+                        </div>
+                        <img class="post-image" src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" alt="Marathon finish line">
+                        <div class="post-tags">
+                            <a href="#" class="post-tag">#marathon</a>
+                            <a href="#" class="post-tag">#running</a>
+                            <a href="#" class="post-tag">#achievement</a>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#" class="post-action">
+                            <i class="far fa-heart" aria-hidden="true"></i> 24
+                        </a>
+                        <a href="#" class="post-action">
+                            <i class="far fa-comment" aria-hidden="true"></i> 8
+                        </a>
+                        <a href="#" class="post-action">
+                            <i class="fas fa-share" aria-hidden="true"></i> Share
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Post 2 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://randomuser.me/api/portraits/men/45.jpg" alt="User profile">
+                            <div class="post-user-info">
+                                <h4>Michael Chen</h4>
+                                <p>Nutrition Coach</p>
+                            </div>
+                        </div>
+                        <div class="post-time">1 day ago</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-text">
+                            Sharing my favorite post-workout smoothie recipe that helps with recovery:
+                            <br><br>
+                            - 1 banana<br>
+                            - 1 scoop protein powder<br>
+                            - 1 tbsp almond butter<br>
+                            - 1 cup almond milk<br>
+                            - Handful of spinach<br>
+                            - Ice cubes<br>
+                            <br>
+                            Blend until smooth! The potassium from the banana helps with muscle cramps 
+                            and the protein aids in recovery.
+                        </div>
+                        <div class="post-tags">
+                            <a href="#" class="post-tag">#nutrition</a>
+                            <a href="#" class="post-tag">#recovery</a>
+                            <a href="#" class="post-tag">#smoothie</a>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#" class="post-action">
+                            <i class="far fa-heart" aria-hidden="true"></i> 42
+                        </a>
+                        <a href="#" class="post-action">
+                            <i class="far fa-comment" aria-hidden="true"></i> 15
+                        </a>
+                        <a href="#" class="post-action">
+                            <i class="fas fa-share" aria-hidden="true"></i> Share
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Post 3 -->
+                <div class="post-card">
+                    <div class="post-header">
+                        <div class="post-user">
+                            <img src="https://randomuser.me/api/portraits/women/68.jpg" alt="User profile">
+                            <div class="post-user-info">
+                                <h4>Priya Patel</h4>
+                                <p>Yoga Instructor</p>
+                            </div>
+                        </div>
+                        <div class="post-time">2 days ago</div>
+                    </div>
+                    <div class="post-content">
+                        <div class="post-text">
+                            Join me for a virtual sunrise yoga session this Sunday at 6:30 AM! 
+                            We'll focus on gentle stretches and breathing exercises to start 
+                            your day with energy and mindfulness. Perfect for all levels.
+                            <br><br>
+                            Comment below if you're interested and I'll send you the Zoom link!
+                        </div>
+                        <div class="post-tags">
+                            <a href="#" class="post-tag">#yoga</a>
+                            <a href="#" class="post-tag">#virtual</a>
+                            <a href="#" class="post-tag">#mindfulness</a>
+                        </div>
+                    </div>
+                    <div class="post-actions">
+                        <a href="#" class="post-action">
+                            <i class="far fa-heart" aria-hidden="true"></i> 36
+                        </a>
+                        <a href="#" class="post-action">
+                            <i class="far fa-comment" aria-hidden="true"></i> 22
+                        </a>
+                        <a href="#" class="post-action">
+                            <i class="fas fa-share" aria-hidden="true"></i> Share
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Community Sidebar -->
+            <div class="community-sidebar">
+                <!-- Groups Widget -->
+                <div class="groups-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">Suggested Groups</h3>
+                        <a href="#" class="widget-link">See All</a>
+                    </div>
+                    <ul class="group-list">
+                        <li class="group-item">
+                            <img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Running group">
+                            <div class="group-info">
+                                <h4>Running Enthusiasts</h4>
+                                <p>12.5k members</p>
+                            </div>
+                            <button class="join-btn">Join</button>
+                        </li>
+                        <li class="group-item">
+                            <img src="https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Yoga group">
+                            <div class="group-info">
+                                <h4>Yoga & Mindfulness</h4>
+                                <p>8.2k members</p>
+                            </div>
+                            <button class="join-btn joined">Joined</button>
+                        </li>
+                        <li class="group-item">
+                            <img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Weightlifting group">
+                            <div class="group-info">
+                                <h4>Weightlifting Club</h4>
+                                <p>5.7k members</p>
+                            </div>
+                            <button class="join-btn">Join</button>
+                        </li>
+                        <li class="group-item">
+                            <img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixlib=rb-1.2.1&auto=format&fit=crop&w=100&q=80" alt="Vegan group">
+                            <div class="group-info">
+                                <h4>Vegan Fitness</h4>
+                                <p>3.9k members</p>
+                            </div>
+                            <button class="join-btn">Join</button>
+                        </li>
+                    </ul>
+                </div>
+                
+                <!-- Events Widget -->
+                <div class="events-widget">
+                    <div class="widget-header">
+                        <h3 class="widget-title">Upcoming Events</h3>
+                        <a href="#" class="widget-link">See All</a>
+                    </div>
+                    <ul class="event-list">
+                        <li class="event-item">
+                            <div class="event-date">June 15, 2023 • Virtual</div>
+                            <h4 class="event-title">Mindfulness Meditation Workshop</h4>
+                            <div class="event-details">Learn techniques to reduce stress and improve focus</div>
+                            <div class="event-rsvp">
+                                <button class="rsvp-btn">Interested</button>
+                                <button class="rsvp-btn going">Going</button>
+                            </div>
+                        </li>
+                        <li class="event-item">
+                            <div class="event-date">June 22, 2023 • Central Park</div>
+                            <h4 class="event-title">Community 5K Fun Run</h4>
+                            <div class="event-details">All levels welcome! Free participation</div>
+                            <div class="event-rsvp">
+                                <button class="rsvp-btn">Interested</button>
+                                <button class="rsvp-btn">Going</button>
+                            </div>
+                        </li>
+                        <li class="event-item">
+                            <div class="event-date">July 5, 2023 • Virtual</div>
+                            <h4 class="event-title">Nutrition for Athletes Webinar</h4>
+                            <div class="event-details">With professional nutritionist Dr. Emma Wilson</div>
+                            <div class="event-rsvp">
+                                <button class="rsvp-btn">Interested</button>
+                                <button class="rsvp-btn going">Going</button>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Post Modal -->
+    <div class="modal" id="postModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h3>Create New Post</h3>
+            <form class="post-form" id="postForm">
+                <div class="form-group">
+                    <label for="postText">What's on your mind?</label>
+                    <textarea id="postText" placeholder="Share your thoughts, questions, or achievements with the community..."></textarea>
+                </div>
+                <div class="image-preview" id="imagePreview">
+                    <img id="previewImage" src="#" alt="Preview">
+                    <button class="remove-image" id="removeImage">&times;</button>
+                </div>
+                <div class="form-actions">
+                    <div>
+                        <input type="file" id="fileInput" class="file-input" accept="image/*">
+                        <label for="fileInput" class="file-label">
+                            <i class="fas fa-camera"></i> Add Photo
+                        </label>
+                    </div>
+                    <button type="submit" class="submit-btn">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="jsnepflex/community.js"></script>
+</body>
+</html>

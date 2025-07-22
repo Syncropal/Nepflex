@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sleep - Nepflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/sleep.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-heartbeat" aria-hidden="true"></i> Nepflex</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Activities</span>
+            </a>
+            <a href="progress.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="nutrition.html" class="menu-item">
+                <i class="fas fa-utensils"></i>
+                <span>Nutrition</span>
+            </a>
+            <a href="workouts.html" class="menu-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workouts</span>
+            </a>
+            <a href="sleep.html" class="menu-item active">
+                <i class="fas fa-moon"></i>
+                <span>Sleep</span>
+            </a>
+            <a href="login.html" class="menu-item" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="sleep-header">
+            <h1 class="sleep-title">Sleep Tracking</h1>
+            <button class="log-sleep-btn" id="logSleepBtn">
+                <i class="fas fa-plus"></i> Log Sleep
+            </button>
+        </div>
+        
+        <!-- Sleep Summary Cards -->
+        <div class="sleep-summary">
+            <div class="summary-card">
+                <div class="summary-header">
+                    <div class="summary-title">Last Night</div>
+                    <i class="fas fa-bed" aria-hidden="true"></i>
+                </div>
+                <div class="summary-value">7h 42m</div>
+                <div class="summary-change positive">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i> 12% from avg
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-header">
+                    <div class="summary-title">Sleep Quality</div>
+                    <i class="fas fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="summary-value">82%</div>
+                <div class="summary-change positive">
+                    <i class="fas fa-arrow-up" aria-hidden="true"></i> 8% from avg
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-header">
+                    <div class="summary-title">Time to Sleep</div>
+                    <i class="fas fa-clock" aria-hidden="true"></i>
+                </div>
+                <div class="summary-value">14 min</div>
+                <div class="summary-change negative">
+                    <i class="fas fa-arrow-down" aria-hidden="true"></i> 3 min longer
+                </div>
+            </div>
+            <div class="summary-card">
+                <div class="summary-header">
+                    <div class="summary-title">Wake Ups</div>
+                    <i class="fas fa-bell" aria-hidden="true"></i>
+                </div>
+                <div class="summary-value">2</div>
+                <div class="summary-change positive">
+                    <i class="fas fa-arrow-down" aria-hidden="true"></i> 1 less
+                </div>
+            </div>
+        </div>
+        
+        <!-- Sleep Chart -->
+        <div class="sleep-chart-container">
+            <div class="chart-header">
+                <h3 class="chart-title">Sleep Stages</h3>
+                <div class="chart-legend">
+                    <div class="legend-item">
+                        <div class="legend-color legend-deep"></div>
+                        <span>Deep</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color legend-light"></div>
+                        <span>Light</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color legend-rem"></div>
+                        <span>REM</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color legend-awake"></div>
+                        <span>Awake</span>
+                    </div>
+                </div>
+            </div>
+            <div class="sleep-chart" id="sleepChart">
+                <!-- Chart bars will be added dynamically -->
+            </div>
+            <div class="chart-labels">
+                <span>10 PM</span>
+                <span>12 AM</span>
+                <span>2 AM</span>
+                <span>4 AM</span>
+                <span>6 AM</span>
+                <span>8 AM</span>
+            </div>
+        </div>
+        
+        <!-- Sleep History -->
+        <div class="sleep-history">
+            <div class="history-header">
+                <h3 class="history-title">Sleep History</h3>
+                <div class="history-filter">
+                    <button class="filter-btn active">Week</button>
+                    <button class="filter-btn">Month</button>
+                    <button class="filter-btn">Year</button>
+                </div>
+            </div>
+            <ul class="history-list">
+                <li class="history-item">
+                    <div class="history-date">Today</div>
+                    <div class="history-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">7h 42m</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">82%</div>
+                            <div class="stat-label">Quality</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">14 min</div>
+                            <div class="stat-label">To Sleep</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">2</div>
+                            <div class="stat-label">Wake Ups</div>
+                        </div>
+                    </div>
+                    <div class="history-quality">
+                        <span class="quality-badge quality-excellent">Excellent</span>
+                    </div>
+                </li>
+                <li class="history-item">
+                    <div class="history-date">Yesterday</div>
+                    <div class="history-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">6h 58m</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">75%</div>
+                            <div class="stat-label">Quality</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">22 min</div>
+                            <div class="stat-label">To Sleep</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">3</div>
+                            <div class="stat-label">Wake Ups</div>
+                        </div>
+                    </div>
+                    <div class="history-quality">
+                        <span class="quality-badge quality-good">Good</span>
+                    </div>
+                </li>
+                <li class="history-item">
+                    <div class="history-date">May 12</div>
+                    <div class="history-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">7h 15m</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">68%</div>
+                            <div class="stat-label">Quality</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">18 min</div>
+                            <div class="stat-label">To Sleep</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">4</div>
+                            <div class="stat-label">Wake Ups</div>
+                        </div>
+                    </div>
+                    <div class="history-quality">
+                        <span class="quality-badge quality-fair">Fair</span>
+                    </div>
+                </li>
+                <li class="history-item">
+                    <div class="history-date">May 11</div>
+                    <div class="history-stats">
+                        <div class="stat-item">
+                            <div class="stat-value">5h 30m</div>
+                            <div class="stat-label">Duration</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">52%</div>
+                            <div class="stat-label">Quality</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">35 min</div>
+                            <div class="stat-label">To Sleep</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-value">6</div>
+                            <div class="stat-label">Wake Ups</div>
+                        </div>
+                    </div>
+                    <div class="history-quality">
+                        <span class="quality-badge quality-poor">Poor</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Log Sleep Modal -->
+    <div class="modal" id="sleepModal">
+        <div class="modal-content">
+            <h3>Log Sleep Session</h3>
+            <form class="sleep-form" id="sleepForm">
+                <div class="form-group">
+                    <label for="sleepDate">Date</label>
+                    <input type="date" id="sleepDate" required>
+                </div>
+                <div class="form-group">
+                    <label for="bedtime">Bedtime</label>
+                    <input type="time" id="bedtime" required>
+                </div>
+                <div class="form-group">
+                    <label for="wakeup">Wake Up Time</label>
+                    <input type="time" id="wakeup" required>
+                </div>
+                <div class="form-group">
+                    <label for="sleepQuality">Sleep Quality</label>
+                    <select id="sleepQuality" required>
+                        <option value="">Select quality</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="good">Good</option>
+                        <option value="fair">Fair</option>
+                        <option value="poor">Poor</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="sleepNotes">Notes</label>
+                    <textarea id="sleepNotes" rows="3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="button" class="modal-close" id="cancelSleepLog">Cancel</button>
+                    <button type="submit" class="modal-close" style="background-color: var(--primary-dark)">Save</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // DOM Elements
+            const logSleepBtn = document.getElementById('logSleepBtn');
+            const sleepModal = document.getElementById('sleepModal');
+            const sleepForm = document.getElementById('sleepForm');
+            const cancelSleepLog = document.getElementById('cancelSleepLog');
+            const logoutBtn = document.getElementById('logoutBtn');
+            const sleepChart = document.getElementById('sleepChart');
+            const filterBtns = document.querySelectorAll('.filter-btn');
+            
+            // Sleep stage data for the chart
+            const sleepStages = [
+                { type: 'awake', duration: 15, start: 0 },
+                { type: 'light', duration: 45, start: 15 },
+                { type: 'deep', duration: 75, start: 60 },
+                { type: 'light', duration: 30, start: 135 },
+                { type: 'rem', duration: 25, start: 165 },
+                { type: 'light', duration: 40, start: 190 },
+                { type: 'deep', duration: 60, start: 230 },
+                { type: 'light', duration: 35, start: 290 },
+                { type: 'rem', duration: 30, start: 325 },
+                { type: 'light', duration: 45, start: 355 },
+                { type: 'awake', duration: 10, start: 400 },
+                { type: 'light', duration: 50, start: 410 },
+                { type: 'rem', duration: 20, start: 460 }
+            ];
+            
+            // Initialize
+            renderSleepChart();
+            setupEventListeners();
+            
+            function renderSleepChart() {
+                // Clear existing chart
+                sleepChart.innerHTML = '';
+                
+                // Calculate total sleep duration
+                const totalDuration = sleepStages.reduce((sum, stage) => sum + stage.duration, 0);
+                
+                // Create bars for each sleep stage
+                sleepStages.forEach(stage => {
+                    const bar = document.createElement('div');
+                    bar.className = `chart-bar ${stage.type}`;
+                    
+                    // Calculate bar dimensions
+                    const barWidth = 100 / sleepStages.length;
+                    const barHeight = (stage.duration / totalDuration) * 100;
+                    const barLeft = (stage.start / totalDuration) * 100;
+                    
+                    // Apply styles
+                    bar.style.width = `${barWidth}%`;
+                    bar.style.height = `${barHeight}%`;
+                    bar.style.left = `${barLeft}%`;
+                    
+                    // Add tooltip
+                    bar.title = `${stage.type.toUpperCase()}: ${stage.duration} min`;
+                    
+                    sleepChart.appendChild(bar);
+                });
+            }
+            
+            function setupEventListeners() {
+                // Log Sleep Button
+                logSleepBtn.addEventListener('click', function() {
+                    sleepModal.classList.add('active');
+                });
+                
+                // Cancel Button
+                cancelSleepLog.addEventListener('click', function() {
+                    sleepModal.classList.remove('active');
+                });
+                
+                // Sleep Form Submission
+                sleepForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    // In a real app, you would save the sleep data here
+                    sleepModal.classList.remove('active');
+                    showToast('Sleep logged successfully!');
+                });
+                
+                // Filter Buttons
+                filterBtns.forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        filterBtns.forEach(b => b.classList.remove('active'));
+                        this.classList.add('active');
+                        // In a real app, you would filter the history here
+                    });
+                });
+                
+                // Logout Button
+                logoutBtn.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    if (confirm('Are you sure you want to logout?')) {
+                        window.location.href = 'login.html';
+                    }
+                });
+                
+                // Close modal when clicking outside
+                sleepModal.addEventListener('click', function(e) {
+                    if (e.target === sleepModal) {
+                        sleepModal.classList.remove('active');
+                    }
+                });
+            }
+            
+            function showToast(message) {
+                const toast = document.createElement('div');
+                toast.className = 'toast';
+                toast.textContent = message;
+                document.body.appendChild(toast);
+                
+                setTimeout(() => {
+                    toast.remove();
+                }, 3000);
+            }
+        });
+    </script>
+</body>
+</html>

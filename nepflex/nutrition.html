@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nutrition - Nepflex</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="cssnepflex/nutrition.css">
+</head>
+<body>
+    <!-- Sidebar Navigation -->
+    <div class="sidebar">
+        <div class="sidebar-header">
+            <h2><i class="fas fa-heartbeat"></i> Nepflex</h2>
+        </div>
+        <div class="sidebar-menu">
+            <a href="dashboard.html" class="menu-item">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="activities.html" class="menu-item">
+                <i class="fas fa-calendar-check"></i>
+                <span>Activities</span>
+            </a>
+            <a href="progress.html" class="menu-item">
+                <i class="fas fa-chart-line"></i>
+                <span>Progress</span>
+            </a>
+            <a href="nutrition.html" class="menu-item active">
+                <i class="fas fa-utensils"></i>
+                <span>Nutrition</span>
+            </a>
+            <a href="workouts.html" class="menu-item">
+                <i class="fas fa-dumbbell"></i>
+                <span>Workouts</span>
+            </a>
+            <a href="sleep.html" class="menu-item">
+                <i class="fas fa-moon"></i>
+                <span>Sleep</span>
+            </a>
+            <a href="login.html" class="menu-item" id="logoutBtn">
+                <i class="fas fa-sign-out-alt"></i>
+                <span>Logout</span>
+            </a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content fade-in">
+        <!-- Header -->
+        <div class="page-header">
+            <h1 class="page-title">Nutrition Tracker</h1>
+            <div class="date-selector">
+                <button class="date-btn" id="prevDay">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <span class="current-date" id="currentDate">Today, June 15</span>
+                <button class="date-btn" id="nextDay">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Nutrition Summary -->
+        <div class="nutrition-summary">
+            <div class="nutrition-card">
+                <div class="nutrient-header">
+                    <span class="nutrient-name">Calories</span>
+                    <i class="fas fa-fire"></i>
+                </div>
+                <div class="nutrient-value">1,842</div>
+                <div class="nutrient-target">of 2,200 target</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrient-header">
+                    <span class="nutrient-name">Protein</span>
+                    <i class="fas fa-drumstick-bite"></i>
+                </div>
+                <div class="nutrient-value">128g</div>
+                <div class="nutrient-target">of 150g target</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrient-header">
+                    <span class="nutrient-name">Carbs</span>
+                    <i class="fas fa-bread-slice"></i>
+                </div>
+                <div class="nutrient-value">210g</div>
+                <div class="nutrient-target">of 250g target</div>
+            </div>
+            <div class="nutrition-card">
+                <div class="nutrient-header">
+                    <span class="nutrient-name">Fat</span>
+                    <i class="fas fa-bacon"></i>
+                </div>
+                <div class="nutrient-value">68g</div>
+                <div class="nutrient-target">of 80g target</div>
+            </div>
+        </div>
+        
+        <!-- Meal Log -->
+        <div class="meal-log">
+            <div class="log-header">
+                <h3 class="section-title">Meal Log</h3>
+                <button class="add-meal-btn" id="addMealBtn">
+                    <i class="fas fa-plus"></i> Add Meal
+                </button>
+            </div>
+            
+            <div class="meal-tabs">
+                <div class="meal-tab active">Breakfast</div>
+                <div class="meal-tab">Lunch</div>
+                <div class="meal-tab">Dinner</div>
+                <div class="meal-tab">Snacks</div>
+            </div>
+            
+            <ul class="meal-items">
+                <li class="meal-item">
+                    <div class="food-icon">
+                        <i class="fas fa-egg"></i>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-name">Scrambled Eggs with Avocado</div>
+                        <div class="food-details">
+                            <span>Protein: 18g</span>
+                            <span>Carbs: 12g</span>
+                            <span>Fat: 22g</span>
+                            <span class="food-calories">320 kcal</span>
+                        </div>
+                    </div>
+                    <div class="food-actions">
+                        <button class="food-action-btn" aria-label="Edit food">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="food-action-btn" aria-label="Delete food">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </li>
+                <li class="meal-item">
+                    <div class="food-icon">
+                        <i class="fas fa-apple-alt"></i>
+                    </div>
+                    <div class="food-info">
+                        <div class="food-name">Greek Yogurt with Berries</div>
+                        <div class="food-details">
+                            <span>Protein: 12g</span>
+                            <span>Carbs: 28g</span>
+                            <span>Fat: 5g</span>
+                            <span class="food-calories">210 kcal</span>
+                        </div>
+                    </div>
+                    <div class="food-actions">
+                        <button class="food-action-btn" aria-label="Edit food">
+                            <i class="fas fa-edit"></i>
+                        </button>
+                        <button class="food-action-btn" aria-label="Delete food">
+                            <i class="fas fa-trash"></i>
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Water Tracker -->
+        <div class="water-tracker">
+            <div class="water-header">
+                <h3 class="section-title">Water Intake</h3>
+                <div class="water-controls">
+                    <span>2.1L / 3L</span>
+                    <button class="water-btn" id="addWater">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="water-progress">
+                <div class="water-progress-bar" style="width: 70%"></div>
+                <div class="water-label">70% Completed</div>
+            </div>
+        </div>
+    </div>
+
+    <script src="jsnepflex/nutrition.js"></script>
+</body>
+</html>

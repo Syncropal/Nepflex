@@ -1,0 +1,399 @@
+:root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #81c784;
+            --secondary: #f5f5f5;
+            --text: #333;
+            --text-light: #666;
+            --error: #d32f2f;
+            --sidebar-width: 250px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary);
+            color: var(--text);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+        
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .sidebar-header h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .menu-item:hover, .menu-item.active {
+            background: rgba(46, 125, 50, 0.1);
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .menu-item i {
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        
+        /* Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .page-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .date-selector {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .date-btn {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--primary);
+        }
+        
+        .current-date {
+            font-weight: 500;
+        }
+        
+        /* Nutrition Summary */
+        .nutrition-summary {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .nutrition-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+        }
+        
+        .nutrition-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .nutrient-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .nutrient-name {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        .nutrient-value {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .nutrient-target {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+        
+        /* Meal Log */
+        .meal-log {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            margin-bottom: 2rem;
+        }
+        
+        .log-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .add-meal-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .add-meal-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .meal-tabs {
+            display: flex;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 1.5rem;
+        }
+        
+        .meal-tab {
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            font-weight: 500;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+        }
+        
+        .meal-tab.active {
+            color: var(--primary);
+            border-bottom-color: var(--primary);
+        }
+        
+        .meal-items {
+            list-style: none;
+        }
+        
+        .meal-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .meal-item:last-child {
+            border-bottom: none;
+        }
+        
+        .food-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 8px;
+            background: rgba(46, 125, 50, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            color: var(--primary);
+        }
+        
+        .food-info {
+            flex: 1;
+        }
+        
+        .food-name {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+        
+        .food-details {
+            display: flex;
+            gap: 1rem;
+            font-size: 0.8rem;
+            color: var(--text-light);
+        }
+        
+        .food-calories {
+            font-weight: 600;
+            color: var(--primary);
+        }
+        
+        .food-actions {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        .food-action-btn {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .food-action-btn:hover {
+            color: var(--primary);
+        }
+        
+        /* Water Intake */
+        .water-tracker {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        
+        .water-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .water-controls {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+        
+        .water-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .water-btn:hover {
+            background: var(--primary-dark);
+            transform: scale(1.1);
+        }
+        
+        .water-progress {
+            height: 20px;
+            background: #eee;
+            border-radius: 10px;
+            margin-top: 1rem;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .water-progress-bar {
+            height: 100%;
+            background: linear-gradient(to right, #64b5f6, #1976d2);
+            border-radius: 10px;
+            transition: width 0.5s ease;
+        }
+        
+        .water-label {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: white;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .nutrition-summary {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .meal-tabs {
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+            
+            .meal-tab {
+                white-space: nowrap;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .nutrition-summary {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                padding: 1.5rem;
+            }
+            
+            .food-details {
+                flex-wrap: wrap;
+                gap: 0.5rem;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }

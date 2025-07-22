@@ -1,0 +1,359 @@
+:root {
+            --primary: #2e7d32;
+            --primary-dark: #1b5e20;
+            --primary-light: #81c784;
+            --secondary: #f5f5f5;
+            --text: #333;
+            --text-light: #666;
+            --error: #d32f2f;
+            --sidebar-width: 250px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--secondary);
+            color: var(--text);
+        }
+        
+        /* Sidebar */
+        .sidebar {
+            position: fixed;
+            width: var(--sidebar-width);
+            height: 100vh;
+            background: white;
+            box-shadow: 2px 0 10px rgba(0,0,0,0.05);
+            z-index: 100;
+        }
+        
+        .sidebar-header {
+            padding: 1.5rem;
+            border-bottom: 1px solid #eee;
+            text-align: center;
+        }
+        
+        .sidebar-header h2 {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+        
+        .sidebar-menu {
+            padding: 1rem 0;
+        }
+        
+        .menu-item {
+            display: flex;
+            align-items: center;
+            padding: 0.8rem 1.5rem;
+            color: var(--text);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        
+        .menu-item:hover, .menu-item.active {
+            background: rgba(46, 125, 50, 0.1);
+            color: var(--primary);
+            border-left: 4px solid var(--primary);
+        }
+        
+        .menu-item i {
+            margin-right: 1rem;
+            font-size: 1.1rem;
+            width: 20px;
+            text-align: center;
+        }
+        
+        /* Main Content */
+        .main-content {
+            margin-left: var(--sidebar-width);
+            padding: 2rem;
+            transition: all 0.3s;
+        }
+        
+        /* Header */
+        .page-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+        
+        .page-title {
+            font-size: 1.8rem;
+            color: var(--primary);
+        }
+        
+        .time-filter {
+            display: flex;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .time-option {
+            padding: 0.7rem 1.2rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.3s;
+            text-align: center;
+        }
+        
+        .time-option.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            transition: transform 0.3s;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .stat-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-name {
+            font-size: 1rem;
+            color: var(--text-light);
+        }
+        
+        .stat-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+        }
+        
+        .stat-change {
+            display: flex;
+            align-items: center;
+            font-size: 0.9rem;
+        }
+        
+        .stat-change.up {
+            color: var(--primary);
+        }
+        
+        .stat-change.down {
+            color: var(--error);
+        }
+        
+        /* Charts */
+        .chart-container {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+            margin-bottom: 2rem;
+            position: relative;
+        }
+        
+        .chart-header {
+            margin-bottom: 1.5rem;
+        }
+        
+        .chart-title {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .chart-wrapper {
+            position: relative;
+            height: 350px;
+            width: 100%;
+        }
+        
+        /* Goals Section */
+        .goals-section {
+            background: white;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+        }
+        
+        .goals-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .section-title {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+        }
+        
+        .new-goal-btn {
+            background: var(--primary);
+            color: white;
+            border: none;
+            padding: 0.6rem 1.2rem;
+            border-radius: 6px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+        }
+        
+        .new-goal-btn:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        
+        .goal-list {
+            list-style: none;
+        }
+        
+        .goal-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem 0;
+            border-bottom: 1px solid #eee;
+            transition: all 0.3s;
+        }
+        
+        .goal-item:last-child {
+            border-bottom: none;
+        }
+        
+        .goal-checkbox {
+            margin-right: 1rem;
+            cursor: pointer;
+        }
+        
+        .goal-info {
+            flex: 1;
+        }
+        
+        .goal-name {
+            font-weight: 500;
+            margin-bottom: 0.3rem;
+        }
+        
+        .goal-progress {
+            height: 6px;
+            background: #eee;
+            border-radius: 3px;
+            margin-top: 0.5rem;
+            overflow: hidden;
+        }
+        
+        .goal-progress-bar {
+            height: 100%;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: width 0.5s ease;
+        }
+        
+        .goal-actions {
+            display: flex;
+            gap: 0.8rem;
+        }
+        
+        .goal-action-btn {
+            background: none;
+            border: none;
+            color: var(--text-light);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        
+        .goal-action-btn:hover {
+            color: var(--primary);
+        }
+        
+        /* Empty State */
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: var(--text-light);
+        }
+        
+        .empty-state i {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-light);
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .sidebar {
+                transform: translateX(-100%);
+            }
+            
+            .sidebar.active {
+                transform: translateX(0);
+            }
+            
+            .main-content {
+                margin-left: 0;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .stats-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .time-filter {
+                flex-wrap: wrap;
+            }
+            
+            .time-option {
+                flex: 1;
+                min-width: 80px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                padding: 1.5rem;
+            }
+            
+            .chart-wrapper {
+                height: 250px;
+            }
+        }
+        
+        /* Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-out;
+        }
