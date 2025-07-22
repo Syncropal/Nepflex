@@ -1,0 +1,83 @@
+name: Deploy Nepflex Static Site
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  validate:
+    name: Validate Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # HTML Validation (all files in nepflex folder)
+      - name: Validate HTML
+        uses: validator/action@v2
+        with:
+          pattern: "./nepflex/**/*.html"
+          ignore_warnings: "empty-heading,link-type"
+
+      # CSS Validation
+      - name: Validate CSS
+        run: |
+          npm install -g css-validator
+          find ./nepflex/assets/css -name "*.css" -exec css-validator {} \;
+
+      # Link Checking (with proper base URL)
+      - name: Check Links
+        uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --timeout 30
+            --base-url https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/nepflex/
+            ./nepflex/**/*.html
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  optimize:
+    name: Optimize Assets
+    needs: validate
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Minify CSS
+      - name: Minify CSS
+        run: |
+          npm install -g clean-css-cli
+          find ./nepflex/assets/css -name "*.css" | while read file; do
+            cleancss "$file" -o "$file"
+          done
+
+      # Minify JS
+      - name: Minify JavaScript
+        run: |
+          npm install -g terser
+          find ./nepflex/assets/js -name "*.js" | while read file; do
+            terser "$file" -o "$file" --compress
+          done
+
+  deploy:
+    name: Deploy to GitHub Pages
+    needs: optimize
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      # Convert absolute paths to relative
+      - name: Fix Paths for GitHub Pages
+        run: |
+          find ./nepflex -type f \( -name "*.html" -o -name "*.css" \) -exec sed -i \
+            -e 's|href="/|href="./|g' \
+            -e 's|src="/|src="./|g' \
+            -e 's|url("/|url("../|g' \
+            {} \;
+
+      - uses: actions/configure-pages@v4
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./nepflex
+      - uses: actions/deploy-pages@v4
