@@ -21,8 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function loadActivities() {
                 // Show loading state
                 activitiesGrid.classList.add('loading');
-                
-                // Simulate API call
+
                 setTimeout(() => {
                     // Mock data for demo
                     activities = [

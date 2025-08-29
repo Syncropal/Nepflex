@@ -20,218 +20,314 @@
             </a>
             <a href="activities.html" class="menu-item active">
                 <i class="fas fa-calendar-check"></i>
-                <span>Activities</span>
+                <span>
+                    Activities
+                </span>
             </a>
             <a href="progress.html" class="menu-item">
                 <i class="fas fa-chart-line"></i>
-                <span>Progress</span>
+                <span>
+                    Progress
+                </span>
             </a>
             <a href="nutrition.html" class="menu-item">
                 <i class="fas fa-utensils"></i>
-                <span>Nutrition</span>
+                <span>
+                    Nutrition
+                </span>
             </a>
             <a href="workouts.html" class="menu-item">
                 <i class="fas fa-dumbbell"></i>
-                <span>Workouts</span>
+                <span>
+                    Workouts
+                </span>
             </a>
             <a href="sleep.html" class="menu-item">
                 <i class="fas fa-moon"></i>
-                <span>Sleep</span>
+                <span>
+                    Sleep
+                </span>
             </a>
             <a href="#" class="menu-item" id="darkModeToggle">
                 <i class="fas fa-moon"></i>
-                <span>Dark Mode</span>
+                <span>
+                    Dark Mode
+                </span>
             </a>
             <a href="index.html" class="menu-item" id="logoutBtn">
                 <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
+                <span>
+                    Logout
+                </span>
             </a>
         </div>
     </div>
 
+
     <!-- Main Content -->
     <div class="main-content">
         <div class="activity-header">
-            <h1 class="activity-title">Your Activities</h1>
-            <button class="new-activity-btn" id="newActivityBtn">
-                <i class="fas fa-plus"></i> New Activity
-            </button>
+            <h1 class="activity-title">
+                Your Activities
+            </h1>
+            <button class="new-activity-btn" id="newActivityBtn"><i class="fas fa-plus"></i> New Activity</button>
         </div>
         
-        <!-- Activity Filters -->
+
+        <!-- Filters for Activity which is help to Select -->
         <div class="activity-filters">
             <div class="filter-group">
-                <label for="activityType" id="activityTypeLabel">Activity Type</label>
+                <label for="activityType" id="activityTypeLabel">
+                    Activity Type
+                </label>
                 <select id="activityType" aria-labelledby="activityTypeLabel">
-                    <option value="all">All Activities</option>
-                    <option value="running">Running</option>
-                    <option value="walking">Walking</option>
-                    <option value="cycling">Cycling</option>
-                    <option value="swimming">Swimming</option>
-                    <option value="yoga">Yoga</option>
+                    <option value="all">
+                        All Activities
+                    </option>
+                    <option value="running">
+                        Running</option>
+                    <option value="walking">
+                        Walking</option>
+                    <option value="cycling">
+                        Cycling</option>
+                    <option value="swimming">
+                        Swimming</option>
+                    <option value="yoga">
+                        Yoga</option>
                 </select>
             </div>
             <div class="filter-group">
-                <label for="dateRange" id="dateRangeLabel">Date Range</label>
+                <label for="dateRange" id="dateRangeLabel">
+                    Date Range
+                </label>
                 <select id="dateRange" aria-labelledby="dateRangeLabel">
-                    <option value="today">Today</option>
-                    <option value="week">This Week</option>
-                    <option value="month">This Month</option>
-                    <option value="custom">Custom</option>
+                    <option value="today">
+                        Today
+                    </option>
+                    <option value="week">
+                        This Week
+                    </option>
+                    <option value="month">
+                        This Month
+                    </option>
+                    <option value="custom">
+                        Custom
+                    </option>
                 </select>
             </div>
             <div class="filter-group">
-                <label for="sortBy" id="sortByLabel">Sort By</label>
+                <label for="sortBy" id="sortByLabel">
+                    Sort By
+                </label>
                 <select id="sortBy" aria-labelledby="sortByLabel">
-                    <option value="recent">Most Recent</option>
-                    <option value="duration">Duration</option>
-                    <option value="calories">Calories</option>
+                    <option value="recent">
+                        Most Recent
+                    </option>
+                    <option value="duration">
+                        Duration
+                    </option>
+                    <option value="calories">
+                        Calories
+                    </option>
                 </select>
             </div>
         </div>
         
-        <!-- Activities Grid -->
+
+        <!-- Use Grid for Activities Cards -->
         <div class="activities-grid" id="activitiesGrid">
-            <!-- Activity Card 1 -->
+            <!-- 1st Activity Card -->
             <div class="activity-card">
                 <div class="activity-image" 
                      style="background-image: url('https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
                      aria-label="Person running in park">
                 </div>
                 <div class="activity-details">
-                    <span class="activity-type">Running</span>
-                    <h3 class="activity-name">Morning Run</h3>
-                    <p class="activity-description">Great run through the park with perfect weather conditions.</p>
+                    <span class="activity-type">
+                        Running
+                    </span>
+                    <h3 class="activity-name">
+                        Morning Run
+                    </h3>
+                    <p class="activity-description">
+                        Great run through the park with perfect weather conditions.
+                    </p>
                     <div class="activity-stats">
                         <div class="stat">
                             <i class="fas fa-clock" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">32 min</div>
-                                <div class="stat-label">Duration</div>
+                                <div class="stat-value">
+                                    32 min
+                                </div>
+                                <div class="stat-label">
+                                    Duration
+                                </div>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-fire" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">420 cal</div>
-                                <div class="stat-label">Burned</div>
+                                <div class="stat-value">
+                                    420 cal
+                                </div>
+                                <div class="stat-label">
+                                    Burned
+                                </div>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">5.2 km</div>
-                                <div class="stat-label">Distance</div>
+                                <div class="stat-value">
+                                    5.2 km
+                                </div>
+                                <div class="stat-label">
+                                    Distance
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="activity-actions">
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit" aria-hidden="true"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn delete">
-                            <i class="fas fa-trash" aria-hidden="true"></i> Delete
-                        </button>
+                        <button class="actionBtn editBtn"><i class="fas fa-edit" aria-hidden="true"></i> Edit</button>
+                        <button class="actionBtn deleteBtn"><i class="fas fa-trash" aria-hidden="true"></i> Delete</button>
                     </div>
                 </div>
             </div>
             
-            <!-- Activity Card 2 -->
+
+            <!-- 2nd Activity Card -->
             <div class="activity-card">
                 <div class="activity-image" 
                      style="background-image: url('https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
                      aria-label="Person doing yoga">
                 </div>
                 <div class="activity-details">
-                    <span class="activity-type">Yoga</span>
-                    <h3 class="activity-name">Evening Yoga Session</h3>
-                    <p class="activity-description">Relaxing yoga flow to unwind after a long day.</p>
+                    <span class="activity-type">
+                        Yoga
+                    </span>
+                    <h3 class="activity-name">
+                        Evening Yoga Session
+                    </h3>
+                    <p class="activity-description">
+                        Relaxing yoga flow to unwind after a long day.
+                    </p>
                     <div class="activity-stats">
                         <div class="stat">
                             <i class="fas fa-clock" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">45 min</div>
-                                <div class="stat-label">Duration</div>
+                                <div class="stat-value">
+                                    45 min
+                                </div>
+                                <div class="stat-label">
+                                    Duration
+                                </div>
                             </div>
                         </div>
+                        
                         <div class="stat">
                             <i class="fas fa-fire" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">280 cal</div>
-                                <div class="stat-label">Burned</div>
+                                <div class="stat-value">
+                                    280 cal
+                                </div>
+                                <div class="stat-label">
+                                    Burned
+                                </div>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-heart" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">85%</div>
-                                <div class="stat-label">Effort</div>
+                                <div class="stat-value">
+                                    85%
+                                </div>
+                                <div class="stat-label">
+                                    Effort
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="activity-actions">
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit" aria-hidden="true"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn delete">
-                            <i class="fas fa-trash" aria-hidden="true"></i> Delete
-                        </button>
+                        <button class="actionBtn editBtn"><i class="fas fa-edit" aria-hidden="true"></i> Edit</button>
+                        <button class="actionBtn deleteBtn"><i class="fas fa-trash" aria-hidden="true"></i> Delete</button>
                     </div>
                 </div>
             </div>
             
-            <!-- Activity Card 3 -->
+
+            <!--  3rd Activity Card -->
             <div class="activity-card">
                 <div class="activity-image" 
                      style="background-image: url('https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');"
                      aria-label="People cycling on a trail">
                 </div>
                 <div class="activity-details">
-                    <span class="activity-type">Cycling</span>
-                    <h3 class="activity-name">Weekend Bike Ride</h3>
-                    <p class="activity-description">Long ride along the river trail with friends.</p>
+                    <span class="activity-type">
+                        Cycling
+                    </span>
+                    <h3 class="activity-name">
+                        Weekend Bike Ride
+                    </h3>
+                    <p class="activity-description">
+                        Long ride along the river trail with friends.
+                    </p>
                     <div class="activity-stats">
                         <div class="stat">
                             <i class="fas fa-clock" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">2h 15m</div>
-                                <div class="stat-label">Duration</div>
+                                <div class="stat-value">
+                                    2h 15m
+                                </div>
+                                <div class="stat-label">
+                                    Duration
+                                </div>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-fire" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">950 cal</div>
-                                <div class="stat-label">Burned</div>
+                                <div class="stat-value">
+                                    950 cal
+                                </div>
+                                <div class="stat-label">
+                                    Burned
+                                </div>
                             </div>
                         </div>
                         <div class="stat">
                             <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
                             <div>
-                                <div class="stat-value">28 km</div>
-                                <div class="stat-label">Distance</div>
+                                <div class="stat-value">
+                                    28 km
+                                </div>
+                                <div class="stat-label">
+                                    Distance
+                                </div>
                             </div>
                         </div>
                     </div>
                     <div class="activity-actions">
-                        <button class="action-btn edit-btn">
-                            <i class="fas fa-edit" aria-hidden="true"></i> Edit
-                        </button>
-                        <button class="action-btn delete-btn delete">
-                            <i class="fas fa-trash" aria-hidden="true"></i> Delete
-                        </button>
+                        <button class="actionBtn editBtn"><i class="fas fa-edit" aria-hidden="true"></i> Edit</button>
+                        <button class="actionBtn deleteBtn"><i class="fas fa-trash" aria-hidden="true"></i> Delete</button>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Modal Template -->
+
+    <!-- Template for Activity Modal -->
     <div class="modal" id="activityModal">
         <div class="modal-content">
-            <h3 id="modalTitle">Modal Title</h3>
-            <p id="modalMessage">This is a modal message.</p>
-            <button class="modal-close" id="modalClose">OK</button>
+            <h3 id="modalTitle">
+                Modal Title
+            </h3>
+            <p id="modalMessage">
+                This is a modal message.
+            </p>
+            <button class="modal-close" id="modalClose">
+                OK
+            </button>
         </div>
     </div>
 

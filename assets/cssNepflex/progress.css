@@ -21,7 +21,6 @@
             color: var(--text);
         }
         
-        /* Sidebar */
         .sidebar {
             position: fixed;
             width: var(--sidebar-width);
@@ -31,22 +30,22 @@
             z-index: 100;
         }
         
-        .sidebar-header {
+        .sidebarHeader {
             padding: 1.5rem;
             border-bottom: 1px solid #eee;
             text-align: center;
         }
         
-        .sidebar-header h2 {
+        .sidebarHeader h2 {
             color: var(--primary);
             font-size: 1.5rem;
         }
         
-        .sidebar-menu {
+        .sidebarMenu {
             padding: 1rem 0;
         }
         
-        .menu-item {
+        .menuItem {
             display: flex;
             align-items: center;
             padding: 0.8rem 1.5rem;
@@ -55,13 +54,13 @@
             transition: all 0.2s;
         }
         
-        .menu-item:hover, .menu-item.active {
+        .menuItem:hover, .menuItem.active {
             background: rgba(46, 125, 50, 0.1);
             color: var(--primary);
             border-left: 4px solid var(--primary);
         }
         
-        .menu-item i {
+        .menuItem i {
             margin-right: 1rem;
             font-size: 1.1rem;
             width: 20px;
@@ -69,14 +68,13 @@
         }
         
         /* Main Content */
-        .main-content {
+        .mainContent {
             margin-left: var(--sidebar-width);
             padding: 2rem;
             transition: all 0.3s;
         }
         
-        /* Header */
-        .page-header {
+        .pageHeader {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -85,12 +83,12 @@
             gap: 1rem;
         }
         
-        .page-title {
+        .pageTitle {
             font-size: 1.8rem;
             color: var(--primary);
         }
         
-        .time-filter {
+        .timeFilter {
             display: flex;
             background: white;
             border-radius: 8px;
@@ -98,7 +96,7 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.05);
         }
         
-        .time-option {
+        .timeOption {
             padding: 0.7rem 1.2rem;
             cursor: pointer;
             font-weight: 500;
@@ -106,20 +104,19 @@
             text-align: center;
         }
         
-        .time-option.active {
+        .timeOption.active {
             background: var(--primary);
             color: white;
         }
         
-        /* Stats Grid */
-        .stats-grid {
+        .statsGrid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
             gap: 1.5rem;
             margin-bottom: 2rem;
         }
         
-        .stat-card {
+        .statCard {
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
@@ -127,45 +124,45 @@
             transition: transform 0.3s;
         }
         
-        .stat-card:hover {
+        .statCard:hover {
             transform: translateY(-5px);
         }
         
-        .stat-header {
+        .statHeader {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 0.5rem;
         }
         
-        .stat-name {
+        .statNname {
             font-size: 1rem;
             color: var(--text-light);
         }
         
-        .stat-value {
+        .statValue {
             font-size: 2rem;
             font-weight: 700;
             color: var(--primary);
             margin-bottom: 0.5rem;
         }
         
-        .stat-change {
+        .statChange {
             display: flex;
             align-items: center;
             font-size: 0.9rem;
         }
         
-        .stat-change.up {
+        .statChange.up {
             color: var(--primary);
         }
         
-        .stat-change.down {
+        .statChange.down {
             color: var(--error);
         }
         
         /* Charts */
-        .chart-container {
+        .chartContainer {
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
@@ -174,44 +171,43 @@
             position: relative;
         }
         
-        .chart-header {
+        .chartHeader {
             margin-bottom: 1.5rem;
         }
         
-        .chart-title {
+        .chartTitle {
             font-size: 1.25rem;
             color: var(--primary);
             font-weight: 600;
         }
         
-        .chart-wrapper {
+        .chartWrapper {
             position: relative;
             height: 350px;
             width: 100%;
         }
-        
-        /* Goals Section */
-        .goals-section {
+    
+        .goalsSection {
             background: white;
             border-radius: 12px;
             padding: 1.5rem;
             box-shadow: 0 2px 12px rgba(0,0,0,0.04);
         }
         
-        .goals-header {
+        .goalsHeader {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-bottom: 1.5rem;
         }
         
-        .section-title {
+        .sectionTitle {
             font-size: 1.25rem;
             color: var(--primary);
             font-weight: 600;
         }
         
-        .new-goal-btn {
+        .newGoal-btn {
             background: var(--primary);
             color: white;
             border: none;
@@ -224,16 +220,16 @@
             align-items: center;
         }
         
-        .new-goal-btn:hover {
+        .newGoal-btn:hover {
             background: var(--primary-dark);
             transform: translateY(-2px);
         }
         
-        .goal-list {
+        .goal-List {
             list-style: none;
         }
         
-        .goal-item {
+        .goalItem {
             display: flex;
             align-items: center;
             padding: 1rem 0;
@@ -241,25 +237,25 @@
             transition: all 0.3s;
         }
         
-        .goal-item:last-child {
+        .goalItem:last-child {
             border-bottom: none;
         }
         
-        .goal-checkbox {
+        .goalCheckbox {
             margin-right: 1rem;
             cursor: pointer;
         }
         
-        .goal-info {
+        .goalInfo {
             flex: 1;
         }
         
-        .goal-name {
+        .goalName {
             font-weight: 500;
             margin-bottom: 0.3rem;
         }
         
-        .goal-progress {
+        .goalProgress {
             height: 6px;
             background: #eee;
             border-radius: 3px;
@@ -267,19 +263,19 @@
             overflow: hidden;
         }
         
-        .goal-progress-bar {
+        .goalProgress-bar {
             height: 100%;
             background: var(--primary);
             border-radius: 3px;
             transition: width 0.5s ease;
         }
         
-        .goal-actions {
+        .goalActions {
             display: flex;
             gap: 0.8rem;
         }
         
-        .goal-action-btn {
+        .goalAction-btn {
             background: none;
             border: none;
             color: var(--text-light);
@@ -287,11 +283,10 @@
             transition: all 0.2s;
         }
         
-        .goal-action-btn:hover {
+        .goalAction-btn:hover {
             color: var(--primary);
         }
         
-        /* Empty State */
         .empty-state {
             text-align: center;
             padding: 2rem;
@@ -304,7 +299,7 @@
             color: var(--primary-light);
         }
         
-        /* Responsive */
+        /* For Responsive */
         @media (max-width: 992px) {
             .sidebar {
                 transform: translateX(-100%);
@@ -348,12 +343,11 @@
             }
         }
         
-        /* Animation */
         @keyframes fadeIn {
             from { opacity: 0; transform: translateY(10px); }
             to { opacity: 1; transform: translateY(0); }
         }
         
-        .fade-in {
+        .fade-In {
             animation: fadeIn 0.5s ease-out;
         }
