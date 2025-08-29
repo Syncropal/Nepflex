@@ -8,82 +8,111 @@
     <link rel="stylesheet" href="./assets/cssNepflex/register.css">
 </head>
 <body>
-    <div class="register-container">
-        <div class="register-header">
+    <div class="registerContainer">
+        <div class="registerHeader">
             <h1>CREATE ACCOUNT</h1>
             <caption>Join our Nepflex</caption>
             <p>“Workout free jasto, result gym jasto.”</p>
         </div>
         
         <form id="registerForm">
-            <div class="name-fields">
-                <div class="input-group">
+            <div class="nameFields">
+                <div class="inputGroup">
                     <label for="firstName">First Name</label>
-                    <i class="fas fa-user input-icon"></i>
+                    <i class="fas fa-user inputIcon"></i>
                     <input type="text" id="firstName" placeholder="Enter your first name" required>
-                    <div class="error-message" id="firstName-error">Please enter your first name</div>
+                    <div class="errorMessage" id="firstName-error">Please enter your first name</div>
                 </div>
                 
-                <div class="input-group">
+                <div class="inputGroup">
                     <label for="lastName">Last Name</label>
-                    <i class="fas fa-user input-icon"></i>
+                    <i class="fas fa-user inputIcon"></i>
                     <input type="text" id="lastName" placeholder="Enter your last name" required>
-                    <div class="error-message" id="lastName-error">Please enter your last name</div>
+                    <div class="errorMessage" id="lastName-error">Please enter your last name</div>
                 </div>
             </div>
             
-            <div class="input-group">
+
+            <div class="inputGroup">
                 <label for="email">Email Address</label>
-                <i class="fas fa-envelope input-icon"></i>
+                <i class="fas fa-envelope inputIcon"></i>
                 <input type="email" id="email" placeholder="Enter your email" required>
-                <div class="error-message" id="email-error">Please enter a valid email address</div>
+                <div class="errorMessage" id="email-error">Please enter a valid email address</div>
             </div>
             
-            <div class="input-group">
+
+            <div class="inputGroup">
                 <label for="userType">I am a</label>
-                <i class="fas fa-users input-icon"></i>
+                <i class="fas fa-users inputIcon"></i>
                 <select id="userType" required>
                     <option value="" disabled selected>Select user type</option>
-                    <option value="student">Student</option>
-                    <option value="general">General Individual</option>
-                    <option value="working">Working Professional</option>
-                    <option value="trainer">Fitness Trainer / Mentor</option>
-                    <option value="community">Community Member</option>
+                    <option value="student">
+                        Student
+                    </option>
+                    <option value="general">
+                        General Individual
+                    </option>
+                    <option value="working">
+                        Working Professional
+                    </option>
+                    <option value="trainer">
+                        Fitness Trainer / Mentor
+                    </option>
+                    <option value="community">
+                        Community Member
+                    </option>
                 </select>
             </div>
             
-            <div class="input-group">
+
+            <div class="inputGroup">
                 <label for="password">Password</label>
-                <i class="fas fa-lock input-icon"></i>
-                <div class="password-container">
+                <i class="fas fa-lock inputIcon"></i>
+                <div class="passwordContainer">
                     <input type="password" id="password" placeholder="Create a password" required>
-                    <i class="fas fa-eye toggle-password" id="togglePassword"></i>
+                    <i class="fas fa-eye togglePassword" id="togglePassword"></i>
                 </div>
-                <div class="error-message" id="password-error">Password must be at least 8 characters</div>
+                <div class="errorMessage" id="password-error">Password must be at least 8 characters</div>
             </div>
             
-            <div class="input-group">
+
+            <div class="inputGroup">
                 <label for="confirmPassword">Confirm Password</label>
-                <i class="fas fa-lock input-icon"></i>
-                <div class="password-container">
+                <i class="fas fa-lock inputIcon"></i>
+                <div class="passwordContainer">
                     <input type="password" id="confirmPassword" placeholder="Confirm your password" required>
-                    <i class="fas fa-eye toggle-password" id="toggleConfirmPassword"></i>
+                    <i class="fas fa-eye togglePassword" id="toggleConfirmPassword"></i>
                 </div>
-                <div class="error-message" id="confirmPassword-error">Passwords do not match</div>
+                <div class="errorMessage" id="confirmPassword-error">Passwords do not match</div>
             </div>
             
+
             <div class="terms">
                 <input type="checkbox" id="agreeTerms" required>
-                <label for="agreeTerms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                <label for="agreeTerms">
+                    I agree to the
+                    <a href="terms.html">
+                        Terms of Service
+                    </a>
+                     and 
+                     <a href="privacy.html">
+                        Privacy Policy
+                    </a>
+                </label>
             </div>
             
-            <button type="submit" class="register-btn">
-                <i class="fas fa-user-plus"></i> Create Account
+
+            <button type="submit" class="registerBtn">
+                <i class="fas fa-user-plus"></i>
+                Create Account
             </button>
         </form>
         
-        <div class="login-link">
-            <p>Already have an account? <a href="index.html">Login Here</a></p>
+
+        <div class="loginLink">
+            <p>
+                Already have an account? <a href="index.html">Login Here</a>
+            </p>
         </div>
     </div>
 

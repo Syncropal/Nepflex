@@ -8,175 +8,226 @@
     <link rel="stylesheet" href="./assets/cssNepflex/progress.css">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
     <div class="sidebar">
-        <div class="sidebar-header">
+        <div class="sidebarHeader">
             <h2><i class="fas fa-heartbeat"></i> Nepflex</h2>
         </div>
-        <div class="sidebar-menu">
-            <a href="dashboard.html" class="menu-item">
+        <div class="sidebarMenu">
+            <a href="dashboard.html" class="menuItem">
                 <i class="fas fa-home"></i>
-                <span>Dashboard</span>
+                <span>
+                    Dashboard
+                </span>
             </a>
-            <a href="activities.html" class="menu-item">
+            <a href="activities.html" class="menuItem">
                 <i class="fas fa-calendar-check"></i>
-                <span>Activities</span>
+                <span>
+                    Activities
+                </span>
             </a>
-            <a href="progress.html" class="menu-item active">
+            <a href="progress.html" class="menuItem active">
                 <i class="fas fa-chart-line"></i>
-                <span>Progress</span>
+                <span>
+                    Progress
+                </span>
             </a>
-            <a href="nutrition.html" class="menu-item">
+            <a href="nutrition.html" class="menuItem">
                 <i class="fas fa-utensils"></i>
-                <span>Nutrition</span>
+                <span>
+                    Nutrition
+                </span>
             </a>
-            <a href="workouts.html" class="menu-item">
+            <a href="workouts.html" class="menuItem">
                 <i class="fas fa-dumbbell"></i>
-                <span>Workouts</span>
+                <span>
+                    Workouts
+                </span>
             </a>
-            <a href="sleep.html" class="menu-item">
+            <a href="sleep.html" class="menuItem">
                 <i class="fas fa-moon"></i>
-                <span>Sleep</span>
+                <span>
+                    Sleep
+                </span>
             </a>
-            <a href="index.html" class="menu-item" id="logoutBtn">
+            <a href="index.html" class="menuItem" id="logoutBtn">
                 <i class="fas fa-sign-out-alt"></i>
-                <span>Logout</span>
+                <span>
+                    Logout
+                </span>
             </a>
         </div>
     </div>
 
-    <!-- Main Content -->
-    <div class="main-content fade-in">
-        <!-- Header -->
-        <div class="page-header">
-            <h1 class="page-title">Your Progress</h1>
-            <div class="time-filter">
-                <div class="time-option active">Week</div>
-                <div class="time-option">Month</div>
-                <div class="time-option">Quarter</div>
+    
+    <div class="mainContent fade-In">
+        <!-- Page Header -->
+        <div class="pageHeader">
+            <h1 class="pageTitle">
+                Your Progress
+            </h1>
+            <div class="timeFilter">
+                <div class="timeOption active">
+                    Week
+                </div>
+                <div class="timeOption">
+                    Month
+                </div>
+                <div class="timeOption">
+                    Quarter
+                </div>
             </div>
         </div>
         
-        <!-- Stats Overview -->
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-name">Total Steps</span>
+        
+        <div class="statsGrid">
+            <div class="statCard">
+                <div class="statHeader">
+                    <span class="statName">
+                        Total Steps
+                    </span>
                     <i class="fas fa-walking"></i>
                 </div>
-                <div class="stat-value">24,583</div>
-                <div class="stat-change up">
-                    <i class="fas fa-arrow-up"></i> 12% from last week
+                <div class="statValue">
+                    24,583
+                </div>
+                <div class="statChange up">
+                    <i class="fas fa-arrow-up"></i>
+                     12% from last week
                 </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-name">Active Minutes</span>
+            <div class="statCard">
+                <div class="statHeader">
+                    <span class="statName">
+                        Active Minutes
+                    </span>
                     <i class="fas fa-clock"></i>
                 </div>
-                <div class="stat-value">342</div>
-                <div class="stat-change up">
-                    <i class="fas fa-arrow-up"></i> 8% from last week
+                <div class="statValue">
+                    342
+                </div>
+                <div class="statChange up">
+                    <i class="fas fa-arrow-up"></i>
+                     8% from last week
                 </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-name">Calories Burned</span>
+            <div class="statCard">
+                <div class="statHeader">
+                    <span class="statName">
+                        Calories Burned
+                    </span>
                     <i class="fas fa-fire"></i>
                 </div>
-                <div class="stat-value">8,742</div>
-                <div class="stat-change up">
-                    <i class="fas fa-arrow-up"></i> 5% from last week
+                <div class="statValue">
+                    8,742
+                </div>
+                <div class="statChange up">
+                    <i class="fas fa-arrow-up"></i>
+                     5% from last week
                 </div>
             </div>
-            <div class="stat-card">
-                <div class="stat-header">
-                    <span class="stat-name">Sleep Average</span>
+            <div class="statCard">
+                <div class="statHeader">
+                    <span class="statName">
+                        Sleep Average
+                    </span>
                     <i class="fas fa-bed"></i>
                 </div>
-                <div class="stat-value">7.2h</div>
-                <div class="stat-change down">
-                    <i class="fas fa-arrow-down"></i> 0.5h less
+                <div class="statValue">
+                    7.2h
+                </div>
+                <div class="statChange down">
+                    <i class="fas fa-arrow-down"></i>
+                     0.5h less
                 </div>
             </div>
         </div>
         
-        <!-- Activity Chart -->
-        <div class="chart-container">
-            <div class="chart-header">
-                <h3 class="chart-title">Weekly Activity Trend</h3>
+        <div class="chartContainer">
+            <div class="chartHeader">
+                <h3 class="chartTitle">
+                    Weekly Activity Trend
+                </h3>
             </div>
-            <div class="chart-wrapper">
+            <div class="chartWrapper">
                 <canvas id="activityChart"></canvas>
             </div>
         </div>
         
-        <!-- Sleep Chart -->
-        <div class="chart-container">
-            <div class="chart-header">
-                <h3 class="chart-title">Sleep Quality</h3>
+        <div class="chartContainer">
+            <div class="chartHeader">
+                <h3 class="chartTitle">
+                    Sleep Quality
+                </h3>
             </div>
-            <div class="chart-wrapper">
+            <div class="chartWrapper">
                 <canvas id="sleepChart"></canvas>
             </div>
         </div>
         
-        <!-- Goals Section -->
-        <div class="goals-section">
-            <div class="goals-header">
-                <h3 class="section-title">Your Goals</h3>
-                <button class="new-goal-btn" id="newGoalBtn" aria-label="Add new goal">
-                    <i class="fas fa-plus"></i> New Goal
-                </button>
+        
+        <div class="goalsSection">
+            <div class="goalsHeader">
+                <h3 class="sectionTitle">
+                    Your Goals
+                </h3>
+                <button class="newGoal-btn" id="newGoalBtn" aria-label="Add new goal"><i class="fas fa-plus"></i> New Goal</button>
+
             </div>
-            <ul class="goal-list" id="goalList">
-                <li class="goal-item">
-                    <input type="checkbox" class="goal-checkbox" checked>
-                    <div class="goal-info">
-                        <div class="goal-name">10,000 daily steps</div>
-                        <div class="goal-progress">
-                            <div class="goal-progress-bar" style="width: 85%"></div>
+            <ul class="goal-List" id="goalList">
+                <li class="goalItem">
+                    <input type="checkbox" class="goalCheckbox" checked>
+                    <div class="goalInfo">
+                        <div class="goalName">
+                            10,000 daily steps
+                        </div>
+                        <div class="goalProgress">
+                            <div class="goalProgress-bar" style="width: 85%"></div>
                         </div>
                     </div>
-                    <div class="goal-actions">
-                        <button class="goal-action-btn" aria-label="Edit goal">
+                    <div class="goalActions">
+                        <button class="goalAction-btn" aria-label="Edit goal">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button class="goal-action-btn" aria-label="Delete goal">
+                        <button class="goalAction-btn" aria-label="Delete goal">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
                 </li>
-                <li class="goal-item">
-                    <input type="checkbox" class="goal-checkbox">
-                    <div class="goal-info">
-                        <div class="goal-name">30 minutes daily exercise</div>
-                        <div class="goal-progress">
-                            <div class="goal-progress-bar" style="width: 65%"></div>
+                
+                <li class="goalItem">
+                    <input type="checkbox" class="goalCheckbox">
+                    <div class="goalInfo">
+                        <div class="goaName">
+                            30 minutes daily exercise
+                        </div>
+                        <div class="goalProgress">
+                            <div class="goalProgress-bar" style="width: 65%"></div>
                         </div>
                     </div>
-                    <div class="goal-actions">
-                        <button class="goal-action-btn" aria-label="Edit goal">
+                    <div class="goalActions">
+                        <button class="goalAction-btn" aria-label="Edit goal">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button class="goal-action-btn" aria-label="Delete goal">
+                        <button class="goalAction-btn" aria-label="Delete goal">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
                 </li>
-                <li class="goal-item">
-                    <input type="checkbox" class="goal-checkbox">
-                    <div class="goal-info">
-                        <div class="goal-name">8 hours of sleep nightly</div>
-                        <div class="goal-progress">
-                            <div class="goal-progress-bar" style="width: 45%"></div>
+                <li class="goalItem">
+                    <input type="checkbox" class="goalCheckbox">
+                    <div class="goalInfo">
+                        <div class="goalName">
+                            8 hours of sleep nightly
+                        </div>
+                        <div class="goalProgress">
+                            <div class="goalProgress-bar" style="width: 45%"></div>
                         </div>
                     </div>
-                    <div class="goal-actions">
-                        <button class="goal-action-btn" aria-label="Edit goal">
+                    <div class="goalActions">
+                        <button class="goalAction-btn" aria-label="Edit goal">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button class="goal-action-btn" aria-label="Delete goal">
+                        <button class="goalAction-btn" aria-label="Delete goal">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>

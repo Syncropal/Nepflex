@@ -26,7 +26,7 @@
             background-attachment: fixed;
         }
         
-        .register-container {
+        .registerContainer {
             background-color: rgba(255, 255, 255, 0.95);
             padding: 2.5rem;
             border-radius: 12px;
@@ -47,29 +47,29 @@
             margin-bottom: 1rem;
         }
         
-        .register-header {
+        .registerHeader {
             margin-bottom: 1.5rem;
         }
         
-        .register-header h1 {
+        .registerHeader h1 {
             color: var(--primary-color);
             font-size: 2rem;
             margin-bottom: 0.5rem;
             font-weight: 700;
         }
         
-        .register-header p {
+        .registerHeader p {
             color: var(--light-text);
             font-size: 1rem;
         }
         
-        .input-group {
+        .inputGroup {
             margin-bottom: 1.25rem;
             text-align: left;
             position: relative;
         }
         
-        .input-group label {
+        .inputGroup label {
             display: block;
             margin-bottom: 0.5rem;
             color: var(--text-color);
@@ -77,7 +77,7 @@
             font-size: 0.9rem;
         }
         
-        .input-group input, .input-group select {
+        .inputGroup input, .inputGroup select {
             width: 100%;
             padding: 0.9rem 1rem 0.9rem 2.5rem;
             border: 1px solid #ddd;
@@ -86,29 +86,29 @@
             transition: all 0.3s;
         }
         
-        .input-group input:focus, .input-group select:focus {
+        .inputGroup input:focus, .inputGroup select:focus {
             border-color: var(--primary-color);
             outline: none;
             box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.2);
         }
         
-        .input-icon {
+        .inputIcon {
             position: absolute;
             left: 1rem;
             top: 2.5rem;
             color: var(--light-text);
         }
         
-        .name-fields {
+        .nameFields {
             display: flex;
             gap: 1rem;
         }
         
-        .name-fields .input-group {
+        .nameFields .inputGroup {
             flex: 1;
         }
-        
-        .register-btn {
+
+        .registerBtn {
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -122,34 +122,34 @@
             margin: 1.5rem 0;
         }
         
-        .register-btn:hover {
+        .registerBtn:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
         }
         
-        .register-btn:active {
+        .registerBtn:active {
             transform: translateY(0);
         }
         
-        .login-link {
+        .loginLink {
             color: var(--light-text);
             font-size: 0.9rem;
         }
         
-        .login-link a {
+        .loginLink a {
             color: var(--primary-color);
             text-decoration: none;
             font-weight: 600;
             transition: color 0.2s;
         }
         
-        .login-link a:hover {
+        .loginLink a:hover {
             color: var(--primary-dark);
             text-decoration: underline;
         }
         
-        .error-message {
+        .errorMessage {
             color: var(--error-color);
             font-size: 0.8rem;
             margin-top: 0.5rem;
@@ -157,11 +157,11 @@
             display: none;
         }
         
-        .password-container {
+        .passwordContainer {
             position: relative;
         }
         
-        .toggle-password {
+        .togglePassword {
             position: absolute;
             right: 1rem;
             top: 50%;
@@ -192,12 +192,12 @@
         }
         
         @media (max-width: 480px) {
-            .register-container {
+            .registerContainer {
                 padding: 1.5rem;
                 margin: 1rem;
             }
             
-            .name-fields {
+            .nameFields {
                 flex-direction: column;
                 gap: 0;
             }

@@ -27,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 let isValid = true;
                 
                 // Reset error messages
-                document.querySelectorAll('.error-message').forEach(el => {
+                document.querySelectorAll('.errorMessage').forEach(el => {
                     el.style.display = 'none';
                 });
                 
@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (isValid) {
                     // Simulate registration process
-                    const registerBtn = document.querySelector('.register-btn');
+                    const registerBtn = document.querySelector('.registerBtn');
                     registerBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...';
                     registerBtn.disabled = true;
                     

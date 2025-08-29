@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function() {
             // Time period selector
-            const timeOptions = document.querySelectorAll('.time-option');
+            const timeOptions = document.querySelectorAll('.timeOption');
             timeOptions.forEach(option => {
                 option.addEventListener('click', function() {
                     timeOptions.forEach(opt => opt.classList.remove('active'));
@@ -18,20 +18,20 @@ document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('newGoalBtn').addEventListener('click', function() {
                 const goalList = document.getElementById('goalList');
                 const newGoal = document.createElement('li');
-                newGoal.className = 'goal-item';
+                newGoal.className = 'goalItem';
                 newGoal.innerHTML = `
-                    <input type="checkbox" class="goal-checkbox">
-                    <div class="goal-info">
-                        <div class="goal-name">New fitness goal</div>
-                        <div class="goal-progress">
-                            <div class="goal-progress-bar" style="width: 0%"></div>
+                    <input type="checkbox" class="goalCheckbox">
+                    <div class="goalInfo">
+                        <div class="goalName">New fitness goal</div>
+                        <div class="goalProgress">
+                            <div class="goalProgressBar" style="width: 0%"></div>
                         </div>
                     </div>
-                    <div class="goal-actions">
-                        <button class="goal-action-btn" aria-label="Edit goal">
+                    <div class="goalActions">
+                        <button class="goalAction-btn" aria-label="Edit goal">
                             <i class="fas fa-edit"></i>
                         </button>
-                        <button class="goal-action-btn" aria-label="Delete goal">
+                        <button class="goalAction-btn" aria-label="Delete goal">
                             <i class="fas fa-trash"></i>
                         </button>
                     </div>
@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Setup goal interactions
             function setupGoalInteractions(goalItem) {
-                const checkbox = goalItem.querySelector('.goal-checkbox');
+                const checkbox = goalItem.querySelector('.goalCheckbox');
                 const deleteBtn = goalItem.querySelector('.fa-trash').closest('button');
                 
                 checkbox.addEventListener('change', function() {
@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             
             // Initialize all existing goals
-            document.querySelectorAll('.goal-item').forEach(setupGoalInteractions);
+            document.querySelectorAll('.goalItem').forEach(setupGoalInteractions);
             
             // Logout button
             document.getElementById('logoutBtn').addEventListener('click', function(e) {
