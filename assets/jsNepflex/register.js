@@ -75,21 +75,18 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     confirmPasswordInput.style.borderColor = '#ddd';
                 }
-                
-                // Terms checkbox validation
+            
                 if (!document.getElementById('agreeTerms').checked) {
                     alert('Please agree to the Terms of Service and Privacy Policy');
                     isValid = false;
                 }
                 
                 if (isValid) {
-                    // Simulate registration process
                     const registerBtn = document.querySelector('.registerBtn');
                     registerBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Creating account...';
                     registerBtn.disabled = true;
                     
                     setTimeout(function() {
-                        // Redirect to dashboard after successful login
                         window.location.href = 'dashboard.html';
                         registerBtn.innerHTML = '<i class="fas fa-user-plus"></i> Create Account';
                         registerBtn.disabled = false;

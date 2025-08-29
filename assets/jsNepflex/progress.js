@@ -9,12 +9,10 @@ document.addEventListener('DOMContentLoaded', function() {
                     updateCharts(this.textContent.trim());
                 });
             });
-            
-            // Initialize charts
+        
             const activityChart = initActivityChart();
             const sleepChart = initSleepChart();
             
-            // New goal button
             document.getElementById('newGoalBtn').addEventListener('click', function() {
                 const goalList = document.getElementById('goalList');
                 const newGoal = document.createElement('li');
@@ -57,18 +55,15 @@ document.addEventListener('DOMContentLoaded', function() {
                     }
                 });
             }
-            
-            // Initialize all existing goals
+    
             document.querySelectorAll('.goalItem').forEach(setupGoalInteractions);
-            
-            // Logout button
+        
             document.getElementById('logoutBtn').addEventListener('click', function(e) {
                 e.preventDefault();
                 // In real app: Clear session data
                 window.location.href = 'login.html';
             });
             
-            // Chart functions
             function initActivityChart() {
                 const ctx = document.getElementById('activityChart').getContext('2d');
                 return new Chart(ctx, {

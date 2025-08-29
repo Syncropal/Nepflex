@@ -67,7 +67,6 @@
             text-align: center;
         }
         
-        /* Main Content */
         .mainContent {
             margin-left: var(--sidebar-width);
             padding: 2rem;
@@ -160,8 +159,7 @@
         .statChange.down {
             color: var(--error);
         }
-        
-        /* Charts */
+
         .chartContainer {
             background: white;
             border-radius: 12px;

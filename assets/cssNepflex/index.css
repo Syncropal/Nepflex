@@ -116,7 +116,7 @@
             text-decoration: underline;
         }
         
-        .loginBtn {
+        .login-btn {
             background-color: var(--primary-color);
             color: white;
             border: none;
@@ -130,13 +130,13 @@
             margin-bottom: 1.5rem;
         }
 
-        .loginBtn:hover {
+        .login-btn:hover {
             background-color: var(--primary-dark);
             transform: translateY(-2px);
             box-shadow: 0 5px 15px rgba(46, 125, 50, 0.3);
         }
 
-        .loginBtn:active {
+        .login-btn:active {
             transform: translateY(0);
         }
         
