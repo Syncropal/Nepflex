@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     
                     setTimeout(function() {
                         window.location.href = 'dashboard.html';
-                        btn.innerHTML = `<i class="fab fa-${platform}"></i>`;
+                        btn.innerHTML = <i class="fab fa-${platform}"></i>;
                         btn.disabled = false;
                     }, );
                 });
