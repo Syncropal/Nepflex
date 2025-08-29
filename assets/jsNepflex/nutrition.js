@@ -63,6 +63,6 @@ document.addEventListener('DOMContentLoaded', function() {
         
             document.getElementById('logoutBtn').addEventListener('click', function(e) {
                 e.preventDefault();
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             });
         });

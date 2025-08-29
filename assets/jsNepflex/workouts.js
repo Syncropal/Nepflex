@@ -243,7 +243,7 @@ document.addEventListener('DOMContentLoaded', function() {
             function handleLogout(e) {
                 e.preventDefault();
                 showModal('Logout', 'Are you sure you want to logout?', () => {
-                    window.location.href = 'login.html';
+                    window.location.href = 'index.html';
                 });
             }
             

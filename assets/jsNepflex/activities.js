@@ -236,7 +236,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 showModal('Logout', 'Are you sure you want to logout?', true, () => {
                     // In a real app, you would clear session data here
-                    window.location.href = 'login.html';
+                    window.location.href = 'index.html';
                 });
             }
             

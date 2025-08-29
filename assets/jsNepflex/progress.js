@@ -60,8 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
         
             document.getElementById('logoutBtn').addEventListener('click', function(e) {
                 e.preventDefault();
-                // In real app: Clear session data
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             });
             
             function initActivityChart() {

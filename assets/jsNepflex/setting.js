@@ -49,6 +49,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.preventDefault();
                 // In a real app, you would handle logout here
                 alert('You have been logged out');
-                window.location.href = 'login.html';
+                window.location.href = 'index.html';
             });
         });
