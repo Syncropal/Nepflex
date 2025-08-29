@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '32 min',
                             calories: '420 cal',
                             distance: '5.2 km',
-                            image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                            image: 'assets/images/running in park.jpg',
                             imageAlt: 'Person running in park'
                         },
                         {
@@ -44,7 +44,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '45 min',
                             calories: '280 cal',
                             effort: '85%',
-                            image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                            image: 'assets/images/yoga teacher.webp',
                             imageAlt: 'Person doing yoga'
                         },
                         {
@@ -55,8 +55,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '2h 15m',
                             calories: '950 cal',
                             distance: '28 km',
-                            image: 'https://images.unsplash.com/photo-1470114716159-e389f8712fda?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-                            imageAlt: 'People cycling on a trail'
+                            image: 'assets/images/weekend bike ride.jpg',
+                            imageAlt: 'People taking Picture Behind Sun with their Bikes'
                         }
                     ];
                     
