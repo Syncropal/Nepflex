@@ -1,5 +1,4 @@
 document.addEventListener('DOMContentLoaded', function() {
-            // Toggle sidebar on mobile
             const menuToggle = document.querySelector('.menu-toggle');
             const sidebar = document.querySelector('.sidebar');
             
@@ -9,11 +8,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 this.setAttribute('aria-expanded', isExpanded);
                 this.classList.toggle('active');
             });
-            
-            // Dark mode toggle with localStorage persistence
+        
             const themeToggle = document.getElementById('themeToggle');
-            
-            // Check for saved user preference or use system preference
+        
             const savedMode = localStorage.getItem('darkMode');
             const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
             
@@ -31,8 +28,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     localStorage.setItem('darkMode', 'false');
                 }
             });
-            
-            // Notification dropdown
+    
             const notificationIcon = document.querySelector('.notification-icon');
             const notificationDropdown = document.querySelector('.notification-dropdown');
             
@@ -40,18 +36,15 @@ document.addEventListener('DOMContentLoaded', function() {
                 e.stopPropagation();
                 notificationDropdown.classList.toggle('active');
             });
-            
-            // Close dropdown when clicking outside
+
             document.addEventListener('click', function() {
                 notificationDropdown.classList.remove('active');
             });
             
-            // Prevent dropdown from closing when clicking inside
             notificationDropdown.addEventListener('click', function(e) {
                 e.stopPropagation();
             });
-            
-            // Simulate loading data
+        
             function simulateLoading() {
                 const cards = document.querySelectorAll('.card');
                 cards.forEach(card => {
@@ -64,19 +57,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     });
                 }, 1500);
             }
-            
-            // Initial load simulation
+        on
             simulateLoading();
-            
-            // You would replace this with actual API calls in a real app
-            // Example:
-            // async function fetchDashboardData() {
-            //     try {
-            //         const response = await fetch('/api/dashboard');
-            //         const data = await response.json();
-            //         updateUI(data);
-            //     } catch (error) {
-            //         console.error('Error fetching data:', error);
-            //     }
-            // }
+    
         });

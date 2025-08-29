@@ -20,18 +20,14 @@ document.addEventListener('DOMContentLoaded', function() {
                 difficulty: 'all',
                 duration: 'all'
             };
-            
-            // Initialize
+
             loadWorkoutPrograms();
             setupEventListeners();
             
             function loadWorkoutPrograms() {
-                // Show loading state
                 workoutPrograms.classList.add('loading');
-                
-                // Simulate API call
+            
                 setTimeout(() => {
-                    // Mock data for demo
                     programs = [
                         {
                             id: 1,
@@ -42,8 +38,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '45 min',
                             exercises: 6,
                             calories: '450 cal',
-                            image: 'https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-                            imageAlt: 'Person lifting weights'
+                            image: 'assets/images/Background.avif',
+                            imageAlt: 'Person doing Abs Exercises'
                         },
                         {
                             id: 2,
@@ -54,8 +50,8 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '25 min',
                             exercises: 4,
                             calories: '350 cal',
-                            image: 'https://images.unsplash.com/photo-1538805060514-97d9cc17730c?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
-                            imageAlt: 'Person running on treadmill'
+                            image: 'assets/images/cardio.avif',
+                            imageAlt: 'Person running'
                         },
                         {
                             id: 3,
@@ -66,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '20 min',
                             exercises: 8,
                             calories: '500 cal',
-                            image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                            image: 'assets/images/HIIT challenge.avif',
                             imageAlt: 'Person doing burpees'
                         },
                         {
@@ -78,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function() {
                             duration: '30 min',
                             exercises: 12,
                             calories: '200 cal',
-                            image: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80',
+                            image: 'assets/images/Person Doing Yoga.avif',
                             imageAlt: 'Person doing yoga'
                         }
                     ];
@@ -153,21 +149,16 @@ document.addEventListener('DOMContentLoaded', function() {
                         </div>
                     </div>
                 `).join('');
-                
-                // Reattach event listeners to new elements
+
                 setupProgramEventListeners();
             }
             
             function setupEventListeners() {
-                // New Workout Button
                 newWorkoutBtn.addEventListener('click', showNewWorkoutForm);
-                
-                // Filter functionality
                 workoutTypeFilter.addEventListener('change', updateFilters);
                 difficultyFilter.addEventListener('change', updateFilters);
                 durationFilter.addEventListener('change', updateFilters);
-                
-                // Category cards
+            
                 categoryCards.forEach(card => {
                     card.addEventListener('click', function() {
                         categoryCards.forEach(c => c.classList.remove('active'));
@@ -176,26 +167,22 @@ document.addEventListener('DOMContentLoaded', function() {
                         filterPrograms();
                     });
                 });
-                
-                // Logout button
+            
                 logoutBtn.addEventListener('click', handleLogout);
-                
-                // Modal close button
+            
                 modalClose.addEventListener('click', closeModal);
                 
-                // Close modal when clicking outside
                 modal.addEventListener('click', function(e) {
                     if (e.target === modal) {
                         closeModal();
                     }
                 });
                 
-                // Setup program event listeners for initial programs
                 setupProgramEventListeners();
             }
             
             function setupProgramEventListeners() {
-                // Start buttons
+
                 document.querySelectorAll('.start-btn').forEach(btn => {
                     btn.addEventListener('click', function() {
                         const programId = this.closest('.program-card').dataset.id;
@@ -203,8 +190,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         showModal('Start Workout', `Starting: ${program.name}`);
                     });
                 });
-                
-                // View buttons
+        
                 document.querySelectorAll('.view-btn').forEach(btn => {
                     btn.addEventListener('click', function() {
                         const programId = this.closest('.program-card').dataset.id;
@@ -226,12 +212,10 @@ document.addEventListener('DOMContentLoaded', function() {
             function filterPrograms() {
                 let filtered = programs;
                 
-                // Filter by category
                 if (currentCategory !== 'all') {
                     filtered = filtered.filter(program => program.category === currentCategory);
                 }
                 
-                // Apply other filters
                 if (currentFilters.type !== 'all') {
                     filtered = filtered.filter(program => program.category === currentFilters.type);
                 }
@@ -259,7 +243,6 @@ document.addEventListener('DOMContentLoaded', function() {
             function handleLogout(e) {
                 e.preventDefault();
                 showModal('Logout', 'Are you sure you want to logout?', () => {
-                    // In a real app, you would clear session data here
                     window.location.href = 'login.html';
                 });
             }
@@ -268,8 +251,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 modalTitle.textContent = title;
                 modalMessage.textContent = message;
                 modal.classList.add('active');
-                
-                // Focus the close button for accessibility
+            
                 modalClose.focus();
             }
             

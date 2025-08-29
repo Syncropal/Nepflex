@@ -47,7 +47,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
             
-            // Social login buttons
             document.querySelectorAll('.socialBtn').forEach(btn => {
                 btn.addEventListener('click', function() {
                     const platform = this.querySelector('i').classList[1].split('-')[1];

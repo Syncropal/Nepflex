@@ -58,7 +58,6 @@ document.addEventListener('DOMContentLoaded', function() {
                     emailInput.style.borderColor = '#ddd';
                 }
                 
-                // Password validation
                 if (!passwordInput.value || passwordInput.value.length < 8) {
                     document.getElementById('password-error').style.display = 'block';
                     passwordInput.style.borderColor = 'var(--error-color)';
@@ -66,8 +65,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 } else {
                     passwordInput.style.borderColor = '#ddd';
                 }
-                
-                // Confirm password validation
+        
                 if (passwordInput.value !== confirmPasswordInput.value) {
                     document.getElementById('confirmPassword-error').style.display = 'block';
                     confirmPasswordInput.style.borderColor = 'var(--error-color)';
