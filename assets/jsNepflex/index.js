@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 if (isValid) {
                     // Simulate login process
-                    const loginBtn = document.querySelector('.login-btn');
+                    const loginBtn = document.querySelector('.loginBtn');
                     loginBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Logging in...';
                     loginBtn.disabled = true;
                     
